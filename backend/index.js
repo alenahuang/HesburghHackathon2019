@@ -20,20 +20,12 @@ app.use(express.static('../frontend'));
 
 
 app.get('/', (req, res)=>{
-    Parse.User.enableUnsafeCurrentUser();
-           Parse.User.become(Parse.Session.sessionToken).then(function (user) {
-               console.log(user)// The current user is now set to user.
-           }, function (error) {
-               console.log(error) // The token could not be validated.
-           });var currentUser = Parse.User.current()
-    if(currentUser){
+
         fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
-    }else{
-        res.redirect("/login")
-    }
+
 
 });
 
@@ -77,7 +69,7 @@ app.post('/user', (req, res) => {
    user.set('username', username);
    user.set('password', password);
    user.set('email', email);
-   user.set('gradYear', year);
+   user.set('year', year);
    user.set('major', major);
    user.set('resHall', resHall);
    user.signUp().then(user => {
@@ -102,6 +94,7 @@ app.post('/login', (req, res) => {
             console.log('Logged in!');
            res.sendStatus(200)
        }).catch(error => console.log('Error: ', error));
+
 });
 
 app.get('/academicEntries', (req, res) => {
