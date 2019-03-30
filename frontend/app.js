@@ -4,16 +4,15 @@ app.config(function ($routeProvider) {
 	// TODO Routing
 	$routeProvider
 		.when('/', {
-			templateUrl: ,
 			controller: 'main'
 		})
 });
 
 app.controller('main', ['$scope', '$http', function($scope, $http) {
-	$scope.title='Home';
+	$scope.title='RateND';
 }]);
 
 
 angular.module('app', [$scope])
-	.controller('indexCtrl', function($scope) {
+	.controller('main', function($scope) {
 	});
