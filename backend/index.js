@@ -69,12 +69,12 @@ app.post('/user', (req, res) => {
    res.sendStatus(200);
 });
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
     var username = req.body.username;
     var password = req.body.password;
    const user = Parse.User.logIn(username, password)
        .then(usr => {
             console.log('Logged in!');
-            res.send(usr);
+            res.sendStatus(200);
        }).catch(error => console.log('Error: ', error));
 });

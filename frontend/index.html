@@ -60,9 +60,9 @@
 
         <div ng-controller="userCreationController">
         <form method="POST" name="userCreate">
-            First name: <br>
+            Username: <br>
             <input type="text" ng-model="username" ><br>
-            Last name: <br>
+            Password: <br>
             <input type="text" ng-model="password"><br>
             Email: <br>
             <input type="text" ng-model="email"><br>
@@ -72,10 +72,20 @@
             <input type="text" ng-model="major"><br>
             Res Hall: <br>
             <input type="text" ng-model="resHall"><br>
-            <input type="button" value="submit" ng-click="createUser(username,password,email,year,major,resHall)">SUBMIT</button>
+            <input type="button" value="submit" ng-click="createUser(username,password,email,year,major,resHall)">
         </form>
         </div>
 
+        <div ng-controller="loginController">
+        <form method="POST" name="login">
+            Username: <br>
+            <input type="text" ng-model="username"> <br>
+            Password: <br>
+            <input type="text" ng-model="password"> <br>
+            <input type="button" value="Login" ng-click="logIn(username, password)"> 
+            
+        </form>        
+        </div>
 
         <div ng-controller="adviceController">
             <div ng-repeat="advice in advices">

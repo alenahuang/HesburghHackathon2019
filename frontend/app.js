@@ -19,11 +19,9 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 }]);
 
 app.controller('loginController', ["$scope", "$http", function($scope, $http) {
-    $scope.logIn = function(){
-        $http.post('/login').then(function(res){
-
+    $scope.logIn = function(username, password){
+        $http.post('/login', {"username": username, "password": password}, "application/json").then(function(res){
     });
-
     }
     
 }]);
