@@ -125,16 +125,16 @@
                 <h5>classes</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="classTitle"></textarea>
                     </div>
                     <div class="form-group">
-                         <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                         <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="professor"></textarea>
                     </div>
                     <div class="form-group">
-                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="class"></textarea>
                     </div>
                     <div class="form-group">
-                         <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3"></textarea>
+                         <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3" ng-model="classExp"></textarea>
                     </div>
                 </form>
         </div>
@@ -144,10 +144,10 @@
                 <h5>Share your strategies on how to study and stay on top of things.</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="studyTitle"></textarea>
                     </div>
                     <div class="form-group">
-                        <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                        <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="studyAdvice"></textarea>
                     </div>
                 </form>
         </div>
@@ -157,10 +157,10 @@
             <h5>career advice.</h5>
             <form>
                 <div class="form-group mt-4">
-                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="careerTitle"></textarea>
                 </div>
                 <div class="form-group">
-                    <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                    <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="careerAdvice"></textarea>
                 </div>
             </form>
         </div>
@@ -170,13 +170,13 @@
                 <h5>events </h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                        <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="ecStars"></textarea>
                     </div>
                     <div class="form-group">
-                        <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                        <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="event"></textarea>
                     </div>
                     <div class="form-group">
-                        <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                        <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="ecsExp"></textarea>
                     </div>
                 </form>
         </div>        
@@ -186,7 +186,7 @@
                 <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
                 <form>
                     <div class="form-group">
-                        <textarea class="form-control" id="textForm" rows="3"></textarea>
+                        <textarea class="form-control" id="textForm" rows="3" ng-model="clubsExp"></textarea>
                     </div>
                 </form>
         </div>
@@ -196,13 +196,13 @@
             <h5>food reviews.</h5>
             <form>
                 <div class="form-group mt-4">
-                    <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="foodStars"></textarea>
                 </div>
                 <div class="form-group">
-                    <h3>Place:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    <h3>Place:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="place"></textarea>
                 </div>
                 <div class="form-group">
-                    <h3>Experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                    <h3>Experience:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="foodExp"></textarea>
                 </div>
 
             </form>
@@ -213,14 +213,33 @@
             <h5>Share your dining hall hacks, healthy recipes, your favorite snacks from the Huddle, etc.</h5>
             <form>
                 <div class="form-group mt-4">
-                    <textarea class="form-control" id="textForm" rows="3"></textarea>
+                    <textarea class="form-control" id="textForm" rows="3" ng-model="foodAdvice"></textarea>
                 </div>
             </form>
         </div>
         <div class="container mt-4">
-            <form class="form-inline">
-                <button class="btn btn-secondary p-3" id="submitRev" type="submit" style="display: none;">Submit</button>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(classTitle, professor, class, classExp)">Submit</button>
             </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary study"  type="submit" style="display: none;" ng-click="study(studyTitle, studyAdvice)">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary career"  type="submit" style="display: none;" ng-click="career(careerTitle, careerAdvice)">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none;" ng-click="events(ecStars, event, ecsExp)">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="clubs(clubsExp)">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary events"  type="submit" style="display: none;" ng-click="review(foodStars, place, foodExp)">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary review"  type="submit" style="display: none;" ng-click="advice(foodAdvice)">Submit</button>
+            </form>
+
 
         </div>
 
@@ -236,29 +255,35 @@
             function handleFirstClick(button) {
                 var classNames = ["aca", "ecs", "food"];
                 document.getElementsByClassName(button.id)[0].style.display = "block";
-                
+                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
                 classNames.splice(classNames.indexOf(button.id), 1);
                 for (i = 0; i < classNames.length; i++) {
                     document.getElementsByClassName(classNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(classNames[i])[1].style.display = "none";
                 }
 
-                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
 
                 for (i = 0; i < individualClassNames.length; i++) {
                     document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(individualClassNames[i])[1].style.display = "none";
                     document.getElementById(individualClassNames[i]).classList.remove("active");
                 }
-                document.getElementById("submitRev").style.display = "none";
+
             }
             function handleSecondClick(button) {
                 var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
-                document.getElementsByClassName(button.id)[0].style.display = "block";
-               
+                var elements = document.getElementsByClassName(button.id);
+                for (i = 0; i < elements.length; i++) {
+                    elements[i].style.display = "block";
+                }
                 individualClassNames.splice(individualClassNames.indexOf(button.id), 1);
+
                 for (i = 0; i < individualClassNames.length; i++) {
                     document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(individualClassNames[i])[1].style.display = "none";
                 }
-                document.getElementById("submitRev").style.display = "block";
+                
+
             }
         </script>
 
