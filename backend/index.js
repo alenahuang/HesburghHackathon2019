@@ -8,7 +8,7 @@ const port = 3000;
 const urlPath = "localhost:3000/";
 
 Parse.initialize('1UL4z4XXj5lcw7FqCZQDi9AEY9oBaCLDU1hlLsDI', 'wCS800zhokit6qVVcY7dvJdunL0yAuIDKe2em9sV');
-Parse.serverURL = 'https://Parseapi.back4app.com/';
+Parse.serverURL = 'https://parseapi.back4app.com/';
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
@@ -96,7 +96,6 @@ app.post('/login', (req, res) => {
 
 app.get('/academicEntries', (req, res) => {
    var AcademicEntry = Parse.Object.extend('AcademicEntry');
-   console.log(req);
    var query = new Parse.Query(AcademicEntry);
    query.equalTo('section', req.query['category']);
    query.find()
