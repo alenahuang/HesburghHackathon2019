@@ -9,11 +9,15 @@ var app = angular.module('app', []);
 // 		})
 // });
 
-app.controller('mainController', ["$scope", function($scope, $http) {
+app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 	$scope.title='RateND';
+    $scope.a = '';
     $scope.searchByKeyword = function() {
-        $http.get('/asdf', $scope.title)
-            .success();
+
+        $http.get('/asdf', $scope.title).then(function(res){
+            $scope.a = res.data
+        })
+
     }
     }
-}]);
+]);
