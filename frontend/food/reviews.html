@@ -87,7 +87,7 @@
             <div class="row my-5" ng-repeat="review in reviews">
                 <div class="col">
                     <h1>
-                        {{review.user.username | review.location}} | Stars: {{review.stars}}
+                        {{review.user.username}} | {{review.location}} | Stars: {{review.stars}}
                     </h1>
                     <h3>
                         {{review.text}}
