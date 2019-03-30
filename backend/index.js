@@ -20,3 +20,12 @@ app.get('/', (req, res)=>{
 app.get('/asdf', (req, res)=>{
     res.send("LOLSBEAUTIFUL")
 })
+
+app.get('/test', (req, res) => {
+    var Advice = parse.Object.extend('Advice');
+    var query = new parse.Query(Advice);
+    query.find()
+        .then(data => {
+           res.send(data);
+        });
+})

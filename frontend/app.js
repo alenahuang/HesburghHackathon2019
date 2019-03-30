@@ -12,12 +12,16 @@ var app = angular.module('app', []);
 app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 	$scope.title='RateND';
     $scope.a = '';
+    $scope.advices = [];
     $scope.searchByKeyword = function() {
 
-        $http.get('/asdf', $scope.title).then(function(res){
-            $scope.a = res.data
-        })
-
+        $http.get('/asdf', $scope.title).then(function (res) {
+        });
+    }
+    $scope.test = function() {
+        $http.get('/test').then(function (res) {
+            $scope.advices = res.data;
+        });
     }
     }
 ]);
