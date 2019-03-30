@@ -57,7 +57,24 @@
                           </div>
             </div>
         </nav>
- 
+
+        <div ng-controller="userCreationController">
+        <form>
+            First name: <br>
+            <input type="text" name="Username" ><br>
+            Last name: <br>
+            <input type="text" name="Password"><br>        
+            Email: <br>
+            <input type="text" name="Email"><br>  
+            Year: <br>
+            <input type="text" name="Year"><br>  
+            Major: <br>
+            <input type="text" name="Major"><br> 
+            Res Hall: <br>
+            <input type="text" name="ResHall"><br>  
+            <button type="submit" name="Submit" ng-click="createUser()">SUBMIT</button>
+        </form>
+        </div>
 
 
         <div ng-controller="adviceController">
