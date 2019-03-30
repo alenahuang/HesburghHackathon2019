@@ -1,5 +1,4 @@
 var app = angular.module('app', []);
-
 // Controllers
 
 app.controller('mainController', ["$scope", "$http", function($scope, $http) {
@@ -18,11 +17,11 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
     }
 }]);
 
-app.controller('loginController', ["$scope", "$http", function($scope, $http) {
-    $scope.logIn = function(username,password){
-        $http.post('/login',{"username":username,"password":password},"application/json").then(function(res){
-
-    });
+app.controller('loginController', ["$scope", "$http", "$window", function($scope, $http, $window) {
+    $scope.logIn = function(username,password){ 
+    $http.post('/login',{"username":username,"password":password},"application/json").then(function(res){
+        $window.location.href = '/'
+        })
 
     }
     
