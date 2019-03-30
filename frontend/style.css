@@ -8,10 +8,6 @@
     color: white;
 }
 
-.header h5 {
-    color: white;
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -22,7 +18,10 @@
 }
 
 #footText {
-    float: left;
-    position: absolute;
+    text-align: center;
     color: white;
+}
+
+#nav-text {
+    font-size: 1.6em;
 }
