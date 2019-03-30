@@ -61,3 +61,9 @@ body {
 #signupbox label {
     font-size: 1.5em;
 }
+
+#categoriesradio {
+    font-size: 1.2em;
+    padding-top: 5px;
+}
+
