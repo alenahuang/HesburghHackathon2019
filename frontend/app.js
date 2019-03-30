@@ -19,9 +19,11 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 }]);
 
 app.controller('loginController', ["$scope", "$http", function($scope, $http) {
-    $scope.logIn = function(username, password){
-        $http.post('/login', {"username": username, "password": password}, "application/json").then(function(res){
+    $scope.logIn = function(username,password){
+        $http.post('/login',{"username":username,"password":password},"application/json").then(function(res){
+
     });
+
     }
     
 }]);
@@ -31,7 +33,7 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
         data = {"username":username,"password":password,"email":email,"year":year,"major":major,"resHall":resHall}
 
         $http.post('/user',data,"application/json").then(function(res){
-            console.log("went through")
+            alert("LOL")
 
     });
 

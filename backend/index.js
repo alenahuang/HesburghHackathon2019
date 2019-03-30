@@ -89,6 +89,5 @@ app.post('/login', (req, res) => {
    const user = Parse.User.logIn(username, password)
        .then(usr => {
             console.log('Logged in!');
-            res.redirect("/")
        }).catch(error => console.log('Error: ', error));
 });

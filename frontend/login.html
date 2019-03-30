@@ -69,15 +69,16 @@
                 <article class="card-body">
                 <a href="" class="float-right btn btn-outline-primary" id="loginbutton">Sign up</a>
                 <h4 class="card-title mb-4 mt-1">Sign in</h4>
-                     <form>
+                <div ng-controller="loginController">
+                     <form method="POST" name="login">
                     <div class="form-group">
-                        <label>Your email</label>
-                        <input name="" class="form-control" placeholder="Email" type="email">
+                        <label>Your username</label>
+                        <input name="" class="form-control" placeholder="Email" type="username" ng-model="username">
                     </div> <!-- form-group// -->
                     <div class="form-group">
                         <a class="float-right" href="#">Forgot?</a>
                         <label>Your password</label>
-                        <input class="form-control" placeholder="******" type="password">
+                        <input class="form-control" placeholder="******" type="password" ng-model="password">
                     </div> <!-- form-group// --> 
                     <div class="form-group"> 
                     <div class="checkbox">
@@ -85,9 +86,23 @@
                     </div> <!-- checkbox .// -->
                     </div> <!-- form-group// -->  
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block" id="loginbutton"> Login  </button>
+                        <input type="button" class="btn btn-primary btn-block" id="loginbutton" value="Login" ng-click="logIn(username,password)">
                     </div> <!-- form-group// -->                                                           
-                </form>
+                     </form>
+                </div>
+
+                     <!--
+                          <div ng-controller="loginController">
+                          <form method="POST" name="login">
+                          Username: <br>
+                          <input type="text" ng-model="username"> <br>
+                          Password: <br>
+                          <input type="text" ng-model="password"> <br>
+                          <input type="button" value="Login" ng-click="logIn(username, password)">
+
+                          </form>
+                          </div>
+                     -->
                 </article>
                 </div>
             </aside>
