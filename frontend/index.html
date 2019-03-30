@@ -14,43 +14,6 @@
     </head>
 
     <body ng-controller="mainController">
-
-        <div class="pull-right">
-            <button type="button" class="btn btn-default btn-lg" aria-label="User">
-                <span>Hello, User Name</span>
-                <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
-            </button>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarColor03">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" id="nav-text" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="#">Academics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="#">Extracurriculars</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="#">Wellness</a>
-            </li>
-          </ul>
-        <div class="pull-right">
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
-            <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
-          </form>
-        </div>
-        </div>
-      </nav>
-=======
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -58,8 +21,8 @@
                 </div>
             </div>
             <div class="pull-right">
-                <h5>Hello, User Name</h5>
                 <button type="button" class="btn btn-default btn-lg" aria-label="User">
+                    <span>Hello, User Name</span>
                     <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
                 </button>
             </div>
@@ -70,24 +33,28 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarColor03">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Academics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Extracurriculars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Wellness</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search...">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                    <div class="collapse navbar-collapse" id="navbarColor03">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" id="nav-text" href="#">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Academics</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Extracurriculars</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Wellness</a>
+                              </li>
+                            </ul>
+                          <div class="pull-right">
+                            <form class="form-inline my-2 my-lg-0">
+                              <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
+                              <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
+                            </form>
+                          </div>
+                          </div>
             </div>
         </nav>
  
