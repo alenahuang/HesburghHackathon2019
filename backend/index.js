@@ -23,14 +23,27 @@ app.get('/asdf', (req, res)=>{
     res.send("LOLSBEAUTIFUL");
 });
 
-app.get('/test', (req, res) => {
+app.get('/advices', (req, res) => {
     var Advice = Parse.Object.extend('Advice');
     var query = new Parse.Query(Advice);
+    query.equalTo('section',req.params["category"])
     query.find()
         .then(data => {
            res.send(data);
         });
 });
+
+
+app.get('/reviews', (req, res) => {
+    var Reviews = Parse.Object.extend('Reviews');
+    var query = new Parse.Query(Reviews);
+    query.equalTo('section',req.params["category"])
+    query.find()
+        .then(data => {
+            res.send(data);
+        });
+})
+
 
 app.post('/user', (req, res) => {
    var user = new Parse.User();
