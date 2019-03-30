@@ -13,7 +13,7 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController">
+    <body ng-controller="submissionsController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -106,50 +106,50 @@
         
         <!-- food subcategories -->
         <div class="container mt-4 food" style="display: none;">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
-                          <input type="radio" name="options" autocomplete="off">Review
-                        </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
-                          <input type="radio" name="options" autocomplete="off">Advice
-                        </label>
-                </div>                     
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
+                    <input type="radio" name="options" autocomplete="off">Review
+                </label>
+                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
+                    <input type="radio" name="options" autocomplete="off">Advice
+                </label>
+            </div>                     
         </div>
 
         <!-- academic forms- class -->
-        <div class="container mt-4 aca classes" style="display: none;">
-                <h2>Academics- Classes Reviews</h2>
-                <h5>classes</h5>
-                <form>
-                    <div class="form-group mt-4">
-                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                         <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                         <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3"></textarea>
-                    </div>
-                </form>
+        <div class="iWantThis container mt-4 aca classes" style="display: none;">
+            <h2>Academics- Classes Reviews</h2>
+            <h5>classes</h5>
+            <form>
+                <div class="form-group mt-4">
+                    <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+            </form>
         </div>
         <!-- academic forms- study habits -->
-        <div class="container mt-4 aca study" style="display: none;">
-                <h2>Academics- Study Habits</h2>
-                <h5>Share your strategies on how to study and stay on top of things.</h5>
-                <form>
-                    <div class="form-group mt-4">
-                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
-                    </div>
-                </form>
+        <div class="iWantThis container mt-4 aca study" style="display: none;">
+            <h2>Academics- Study Habits</h2>
+            <h5>Share your strategies on how to study and stay on top of things.</h5>
+            <form>
+                <div class="form-group mt-4">
+                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+            </form>
         </div>
         <!-- academic forms- career -->
-        <div class="container mt-4 aca career" style="display: none;">
+        <div class="iWantThis container mt-4 aca career" style="display: none;">
             <h2>Academics- Career Advice</h2>
             <h5>career advice.</h5>
             <form>
@@ -162,33 +162,33 @@
             </form>
         </div>
         <!-- extracurriculars- event forms -->
-        <div class="container ecs events mt-4" style="display: none;">
-                <h2>Extracurriculars- Events</h2>
-                <h5>events </h5>
-                <form>
-                    <div class="form-group mt-4">
-                        <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
-                    </div>
-                </form>
+        <div class="iWantThis container ecs events mt-4" style="display: none;">
+            <h2>Extracurriculars- Events</h2>
+            <h5>events </h5>
+            <form>
+                <div class="form-group mt-4">
+                    <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+            </form>
         </div>        
         <!-- extracurriculars- club forms -->
-        <div class="container ecs clubs mt-4" style="display: none;">
-                <h2>Extracurriculars- Clubs</h2>
-                <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
-                <form>
-                    <div class="form-group">
-                        <textarea class="form-control" id="textForm" rows="3"></textarea>
-                    </div>
-                </form>
+        <div class="iWantThis container ecs clubs mt-4" style="display: none;">
+            <h2>Extracurriculars- Clubs</h2>
+            <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+            </form>
         </div>
         <!-- food-review forms -->
-        <div class="container food review mt-4" style="display: none;">
+        <div class="iWantThis container food review mt-4" style="display: none;">
             <h2>Food- Reviews</h2>
             <h5>food reviews.</h5>
             <form>
@@ -205,7 +205,7 @@
             </form>
         </div>
         <!-- food-advice forms -->
-        <div class="container food advice mt-4" style="display: none;">
+        <div class="iWantThis container food advice mt-4" style="display: none;">
             <h2>Food- Advice</h2>
             <h5>Share your dining hall hacks, healthy recipes, your favorite snacks from the Huddle, etc.</h5>
             <form>
@@ -216,7 +216,7 @@
         </div>
         <div class="container mt-4">
             <form class="form-inline">
-                <button class="btn btn-secondary p-3" id="submitRev" type="submit" style="display: none;">Submit</button>
+                <button class="btn btn-secondary p-3" id="submitRev" ng-click="getAll()" style="display: none;">Submit</button>
             </form>
 
         </div>

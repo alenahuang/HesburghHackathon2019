@@ -71,3 +71,17 @@ app.controller('academicsClassController', ["$scope", "$http", function($scope, 
         $scope.classes = res.data;
     });
 }]);
+
+app.controller('submissionsController', ["$scope", "$http", function($scope, $http) {
+    $scope.getAll = function(){
+        var divs = document.querySelectorAll(".iWantThis");
+        var theDiv = ""
+        for(var i = 0; i < divs.length; i++){
+            if(divs[i].style.display === "block"){
+                theDiv = divs[i]
+            }
+        }
+        alert(theDiv.innerHTML)
+
+    }
+}]);
