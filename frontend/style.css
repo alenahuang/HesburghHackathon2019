@@ -46,3 +46,15 @@
 #loginbutton {
     font-size: 1.5em;
 }
+
+#signupbox {
+    font-family: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#signupbox h1 {
+    color: #F3969A;
+}
+
+#signupbox label {
+    font-size: 1.5em;
+}
