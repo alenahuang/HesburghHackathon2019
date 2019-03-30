@@ -27,15 +27,12 @@ app.controller('loginController', ["$scope", "$http", "$window", function($scope
     
 }]);
 
-app.controller('userCreationController', ["$scope", "$http", function($scope, $http) {
-    $scope.createUser = function(username,password,email,year,major,resHall){
+app.controller('userCreationController', ["$scope", "$http", "$window", function($scope, $http, $window) {
+    $scope.createUser = function(username,password,email,year,major,resHall) {
         data = {"username":username,"password":password,"email":email,"year":year,"major":major,"resHall":resHall}
-
-        $http.post('/user',data,"application/json").then(function(res){
-            alert("LOL")
-
-    });
-
+        $http.post('/user', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
     }
 
 }]);
