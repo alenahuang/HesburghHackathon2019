@@ -1,6 +1,6 @@
 <html lang="en" ng-app="app">
 
-    <head ng-controller="mainController">
+    <head>
         <title>{{ title }}</title>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController">
+    <body>
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -73,7 +73,7 @@
                      <form method="POST" name="login">
                     <div class="form-group">
                         <label>Your username</label>
-                        <input name="" class="form-control" placeholder="Email" type="username" ng-model="username">
+                        <input name="" class="form-control" placeholder="Username" type="username" ng-model="username">
                     </div> <!-- form-group// -->
                     <div class="form-group">
                         <a class="float-right" href="#">Forgot?</a>
