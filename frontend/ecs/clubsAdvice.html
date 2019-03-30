@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
-<head>
-    <title>RateND</title>
+<head ng-controller="mainController">
+    <title>{{title}}</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap.min.css">
@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../pagestyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="../app.js"></script>
     
 </head>
 
@@ -35,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="../index.html">Home</a>
+              <a class="nav-link" id="nav-text" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="nav-text" href="../academics/academics.html">Academics</a>
@@ -56,7 +59,7 @@
         </div>
       </nav>
 
-      <div class="container">
+      <div class="container" ng-controller="clubsAdviceController">
           <div class="row">
             <div class="col m-0 p-0">
                 <h1>
@@ -82,33 +85,19 @@
 
           </div>
 
-          <div class="row my-5">
+          <div class="row my-5" ng-repeat="advice in advices">
             <div class="col">
                 <h1>
-                    Review 1
+                    {{advice.user.username}}| {{advice.club}}
                 </h1>
                 <h3>
-                    asdfasdf
+                    {{advice.text}}
                 </h3>
-            </div>
-          </div>
-          <div class="row my-5">
-            <div class="col">
-                <h1>
-                    Review 2
-                </h1>
                 <h3>
-                    asdfasdf
+                    Upvotes: {{advice.upvotes}}
                 </h3>
-            </div>
-          </div>
-        <div class="row my-5">
-            <div class="col">
-                <h1>
-                    Review 3
-                </h1>
                 <h3>
-                    asdfasdf
+                    Downvotes: {{advice.downvotes}}
                 </h3>
             </div>
           </div>
