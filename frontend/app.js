@@ -41,22 +41,46 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
 }]);
 
 app.controller('reviewsController', ["$scope", "$http", function($scope, $http) {
-        $scope.category = 'food'
-
-    $http.get('/reviews',{params:{"category":$scope.category}}).then(function (res) {
-        $scope.advices = res.data;
+    $http.get('/reviews',{"params":{"category":"food"}}).then(function (res) {
+        $scope.reviews = res.data;
     });
 }]);
 
 app.controller('adviceController', ["$scope", "$http", function($scope, $http) {
-    $scope.advices = [];
-    $scope.category = 'food'
-
-    $http.get('/advices',{params:{"category":$scope.category}}).then(function (res) {
+    $http.get('/advices',{params:{"category":"food"}}).then(function (res) {
         $scope.advices = res.data;
     });
 }]);
 
-app.controller('academicsController', ["$scope", "$http", function($scope, $http) {
+// Extracurriculars
 
+app.controller('clubsAdviceController', ["$scope", "$http", function($scope, $http) {
+    $http.get('/advices',{params:{category:"clubs"}}).then(function (res) {
+        $scope.advices = res.data;
+    });
 }]);
+
+app.controller('eventReviewsController', ["$scope", "$http", function($scope, $http) {
+    $http.get('/reviews',{params:{category:"events"}}).then(function (res) {
+        $scope.reviews = res.data;
+    });
+}]);
+
+app.controller('academicsClassController', ["$scope", "$http", function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:"classReview"}}).then(function (res) {
+        $scope.classes = res.data;
+    });
+}]);
+
+app.controller('studyAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'studyAdvice'}}).then(function (res) {
+        $scope.studyAdvices = res.data;
+    });
+}]);
+
+app.controller('careerAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'careerAdvice'}}).then(function (res) {
+        $scope.cadvices = res.data;
+    });
+}]);
+
