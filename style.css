@@ -1,0 +1,28 @@
+.header {
+    overflow: hidden;
+    background-color: #4eac92;
+    padding: 10px 10px;
+  }
+
+.header h1 {
+    color: white;
+}
+
+.header h5 {
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #4eac92;
+}
+
+#footText {
+    float: left;
+    position: absolute;
+    color: white;
+}
