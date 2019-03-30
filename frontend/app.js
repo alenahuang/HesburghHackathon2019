@@ -16,14 +16,9 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
             $scope.advices = res.data;
         });
     }
-    }
-]);
+}]);
 
 app.controller('loginController', ["$scope", "$http", function($scope, $http) {
-    $http.get('/reviews').then(function (res) {
-        $scope.reviews = res.data;
-    });
-
     $scope.logIn = function(){
         $http.post('/login').then(function(res){
 
@@ -31,6 +26,16 @@ app.controller('loginController', ["$scope", "$http", function($scope, $http) {
 
     }
     
+}]);
+
+app.controller('userCreationController', ["$scope", "$http", function($scope, $http) {
+    $scope.createUser = function(){
+        $http.post('/user').then(function(res){
+
+    });
+
+    }
+
 }]);
 
 app.controller('reviewsController', ["$scope", "$http", function($scope, $http) {
