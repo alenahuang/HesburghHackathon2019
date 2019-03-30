@@ -34,7 +34,7 @@ app.get('/asdf', (req, res)=>{
 app.get('/advices', (req, res) => {
     var Advice = Parse.Object.extend('Advice');
     var query = new Parse.Query(Advice);
-    query.equalTo('section',req.params["category"])
+    query.equalTo('section',req.query["category"])
     query.find()
         .then(data => {
            res.send(data);
@@ -43,9 +43,9 @@ app.get('/advices', (req, res) => {
 
 
 app.get('/reviews', (req, res) => {
-    var Reviews = Parse.Object.extend('Reviews');
+    var Reviews = Parse.Object.extend('Review');
     var query = new Parse.Query(Reviews);
-    query.equalTo('section',req.params["category"])
+    query.equalTo('section',req.query["category"])
     query.find()
         .then(data => {
             res.send(data);

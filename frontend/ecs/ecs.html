@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../pagestyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="/app.js"></script>
     
 </head>
 
@@ -35,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="../index.html">Home </a>
+              <a class="nav-link" id="nav-text" href="/">Home </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="nav-text" href="../academics/academics.html">Academics</a>
@@ -58,8 +61,8 @@
 
           <div class="container">
         
-            <div class="row" onclick="(function() {document.location.href='clubsAdvice.html';}());"> 
-                <div class="col text-center center-block p-4 my-5 sect" style="border: 3px solid #F3969A;">
+            <div class="row"> 
+                <div class="col text-center center-block p-4 my-5 sect" style="border: 3px solid #F3969A;" onclick="(function() {document.location.href='clubsAdvice.html';}());">
                         <h1>
                             Clubs Advice
                         </h1>
@@ -69,8 +72,8 @@
                 
                 </div>  
             </div>
-            <div class="row" onclick="(function() {document.location.href='ndEvents.html';}());"> 
-                <div class="col text-center center-block p-4 my-5 sect" style="border: 3px solid #F3969A;">
+            <div class="row"> 
+                <div class="col text-center center-block p-4 my-5 sect" style="border: 3px solid #F3969A;" onclick="(function() {document.location.href='ndEvents.html';}());">
                         <h1 class="">
                             Notre Dame Events
                         </h1>
