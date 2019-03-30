@@ -4,13 +4,13 @@
         <title>{{ title }}</title>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-        <script src="/app.js"></script>
+        <script src="./backend/app.js"></script>
     </head>
 
     <body ng-controller="mainController">
@@ -63,74 +63,122 @@
         </div>
 
         <!-- general categories -->
-        <div class="container" id="categoriesradio">
+        <div class="container mt-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary active" id="categoriesradio">
-                          <input type="radio" name="options" id="option1" autocomplete="off" checked>Academics
+                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="aca">
+                          <input type="radio" name="options" autocomplete="off" >Academics
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                          <input type="radio" name="options" id="option2" autocomplete="off">Extracurriculars
+                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="ecs">
+                          <input type="radio" name="options" autocomplete="off">Extracurriculars
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                          <input type="radio" name="options" id="option3" autocomplete="off">Food
+                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="food">
+                          <input type="radio" name="options" autocomplete="off">Food
                         </label>
                 </div>                     
         </div>
 
         <!-- academics subcategories -->
-        <div class="container" id="categoriesradio">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary active" id="categoriesradio">
-                          <input type="radio" name="options" id="option1" autocomplete="off" checked>Classes
+        <div class="container mt-4 aca" style="display: none;">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" >
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="classes">
+                            <input type="radio" name="options" id="" autocomplete="off">Classes
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                          <input type="radio" name="options" id="option2" autocomplete="off">Study Habits
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="study">
+                            <input type="radio" name="options" id="" autocomplete="off">Study Habits
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                                <input type="radio" name="options" id="option2" autocomplete="off">Career
-                              </label>
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="career">
+                            <input type="radio" name="options" id="" autocomplete="off">Career
+                        </label>
                 </div>                     
         </div>
 
         <!-- extracurriculars subcategories -->
-        <div class="container" id="categoriesradio">
+        <div class="container mt-4 ecs" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary active" id="categoriesradio">
-                          <input type="radio" name="options" id="option1" autocomplete="off" checked>Events
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="events">
+                          <input type="radio" name="options" autocomplete="off" checked>Events
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                          <input type="radio" name="options" id="option2" autocomplete="off">Clubs
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="clubs">
+                          <input type="radio" name="options" autocomplete="off">Clubs
                         </label>
                 </div>                     
         </div>
         
         <!-- food subcategories -->
-        <div class="container" id="categoriesradio">
+        <div class="container mt-4 food" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary active" id="categoriesradio">
-                          <input type="radio" name="options" id="option1" autocomplete="off" checked>Review
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
+                          <input type="radio" name="options" autocomplete="off">Review
                         </label>
-                        <label class="btn btn-secondary" id="categoriesradio">
-                          <input type="radio" name="options" id="option2" autocomplete="off">Advice
+                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
+                          <input type="radio" name="options" autocomplete="off">Advice
                         </label>
                 </div>                     
         </div>
 
         <!-- academic forms- class -->
+        <div class="container mt-4 aca classes" style="display: none;">
+                <h2>Academics- Classes Reviews</h2>
+                <h5>classes</h5>
+                <form>
+                    <div class="form-group mt-4">
+                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                         <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                         <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3"></textarea>
+                    </div>
+                </form>
+        </div>
         <!-- academic forms- study habits -->
-        <div class="container">
+        <div class="container mt-4 aca study" style="display: none;">
                 <h2>Academics- Study Habits</h2>
                 <h5>Share your strategies on how to study and stay on top of things.</h5>
                 <form>
+                    <div class="form-group mt-4">
+                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="textForm" rows="3"></textarea>
+                        <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
                     </div>
                 </form>
         </div>
         <!-- academic forms- career -->
+        <div class="container mt-4 aca career" style="display: none;">
+            <h2>Academics- Career Advice</h2>
+            <h5>career advice.</h5>
+            <form>
+                <div class="form-group mt-4">
+                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
         <!-- extracurriculars- event forms -->
+        <div class="container ecs events mt-4" style="display: none;">
+                <h2>Extracurriculars- Events</h2>
+                <h5>events </h5>
+                <form>
+                    <div class="form-group mt-4">
+                        <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                    </div>
+                </form>
+        </div>        
         <!-- extracurriculars- club forms -->
-        <div class="container">
+        <div class="container ecs clubs mt-4" style="display: none;">
                 <h2>Extracurriculars- Clubs</h2>
                 <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
                 <form>
@@ -140,15 +188,37 @@
                 </form>
         </div>
         <!-- food-review forms -->
+        <div class="container food review mt-4" style="display: none;">
+            <h2>Food- Reviews</h2>
+            <h5>food reviews.</h5>
+            <form>
+                <div class="form-group mt-4">
+                    <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Place:</h3><textarea class="form-control" id="textForm" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Experience:</h3><textarea class="form-control" id="textForm" rows="3"></textarea>
+                </div>
+
+            </form>
+        </div>
         <!-- food-advice forms -->
-        <div class="container">
+        <div class="container food advice mt-4" style="display: none;">
             <h2>Food- Advice</h2>
             <h5>Share your dining hall hacks, healthy recipes, your favorite snacks from the Huddle, etc.</h5>
             <form>
-                <div class="form-group">
+                <div class="form-group mt-4">
                     <textarea class="form-control" id="textForm" rows="3"></textarea>
                 </div>
             </form>
+        </div>
+        <div class="container mt-4">
+            <form class="form-inline">
+                <button class="btn btn-secondary p-3" id="submitRev" type="submit" style="display: none;">Submit</button>
+            </form>
+
         </div>
 
         <footer class="footer">
@@ -156,6 +226,38 @@
                 <p>2019 Hesburgh Hackathon. Created by Zach Sy, Patrick Soga, Peter Davis, and Alena Huang.</p>
             </div>
         </footer>
+
+        <script type="text/javascript">
+            
+
+            function handleFirstClick(button) {
+                var classNames = ["aca", "ecs", "food"];
+                document.getElementsByClassName(button.id)[0].style.display = "block";
+                
+                classNames.splice(classNames.indexOf(button.id), 1);
+                for (i = 0; i < classNames.length; i++) {
+                    document.getElementsByClassName(classNames[i])[0].style.display = "none";
+                }
+
+                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
+
+                for (i = 0; i < individualClassNames.length; i++) {
+                    document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                    document.getElementById(individualClassNames[i]).classList.remove("active");
+                }
+                document.getElementById("submitRev").style.display = "none";
+            }
+            function handleSecondClick(button) {
+                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
+                document.getElementsByClassName(button.id)[0].style.display = "block";
+               
+                individualClassNames.splice(individualClassNames.indexOf(button.id), 1);
+                for (i = 0; i < individualClassNames.length; i++) {
+                    document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                }
+                document.getElementById("submitRev").style.display = "block";
+            }
+        </script>
 
 
     </body>
