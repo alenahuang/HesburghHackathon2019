@@ -25,3 +25,24 @@
 #nav-text {
     font-size: 1.6em;
 }
+
+#loginbox {
+    font-family: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#loginbox h4 {
+    font-size: 3em;
+}
+
+#loginbox label {
+    font-size: 1.5em;
+}
+
+#logincard {
+    width: 40%;
+    border-color: #F3969A;
+}
+
+#loginbutton {
+    font-size: 1.5em;
+}
