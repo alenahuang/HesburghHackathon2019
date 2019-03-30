@@ -50,7 +50,7 @@ app.get('/reviews', (req, res) => {
         .then(data => {
             res.send(data);
         });
-})
+});
 
 
 app.post('/user', (req, res) => {
@@ -92,4 +92,15 @@ app.post('/login', (req, res) => {
            res.sendStatus(200)
        }).catch(error => console.log('Error: ', error));
 
+});
+
+app.get('/academic_entries', (req, res) => {
+   var AcademicEntry = Parse.Object.extend('AcademicEntry');
+   console.log(req);
+   var query = new Parse.Query(AcademicEntry);
+   query.equalTo('section', req.query['section']);
+   query.find()
+       .then(data => {
+           res.send(data);
+       }).catch(error => console.log('Error: ', error));
 });
