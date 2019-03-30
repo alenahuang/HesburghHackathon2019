@@ -27,15 +27,12 @@ app.controller('loginController', ["$scope", "$http", "$window", function($scope
     
 }]);
 
-app.controller('userCreationController', ["$scope", "$http", function($scope, $http) {
-    $scope.createUser = function(username,password,email,year,major,resHall){
+app.controller('userCreationController', ["$scope", "$http", "$window", function($scope, $http, $window) {
+    $scope.createUser = function(username,password,email,year,major,resHall) {
         data = {"username":username,"password":password,"email":email,"year":year,"major":major,"resHall":resHall}
-
-        $http.post('/user',data,"application/json").then(function(res){
-            alert("LOL")
-
-    });
-
+        $http.post('/user', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
     }
 
 }]);
@@ -66,8 +63,35 @@ app.controller('eventReviewsController', ["$scope", "$http", function($scope, $h
     });
 }]);
 
+app.controller('academicsClassController', ["$scope", "$http", function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:"classReview"}}).then(function (res) {
+        $scope.classes = res.data;
+    });
+}]);
 
 
-app.controller('academicsController', ["$scope", "$http", function($scope, $http) {
+app.controller('submissionsController', ["$scope", "$http", function($scope, $http) {
+    $scope.getAll = function(){
+        var divs = document.querySelectorAll(".iWantThis");
+        var theDiv = ""
+        for(var i = 0; i < divs.length; i++){
+            if(divs[i].style.display === "block"){
+                theDiv = divs[i]
+            }
+        }
+        alert(theDiv.innerHTML)
 
+    }
+}]);
+
+app.controller('studyAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'studyAdvice'}}).then(function (res) {
+        $scope.studyAdvices = res.data;
+    });
+}]);
+
+app.controller('careerAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'careerAdvice'}}).then(function (res) {
+        $scope.cadvices = res.data;
+    });
 }]);

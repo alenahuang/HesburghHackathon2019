@@ -8,7 +8,7 @@ const port = 3000;
 const urlPath = "localhost:3000/";
 
 Parse.initialize('1UL4z4XXj5lcw7FqCZQDi9AEY9oBaCLDU1hlLsDI', 'wCS800zhokit6qVVcY7dvJdunL0yAuIDKe2em9sV');
-Parse.serverURL = 'https://Parseapi.back4app.com/';
+Parse.serverURL = 'https://parseapi.back4app.com/';
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
@@ -20,10 +20,13 @@ app.use(express.static('../frontend'));
 
 
 app.get('/', (req, res)=>{
-    fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
+
+        fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
+
+
 });
 
 
@@ -50,7 +53,7 @@ app.get('/reviews', (req, res) => {
         .then(data => {
             res.send(data);
         });
-})
+});
 
 
 app.post('/user', (req, res) => {
@@ -92,4 +95,14 @@ app.post('/login', (req, res) => {
            res.sendStatus(200)
        }).catch(error => console.log('Error: ', error));
 
+});
+
+app.get('/academicEntries', (req, res) => {
+   var AcademicEntry = Parse.Object.extend('AcademicEntry');
+   var query = new Parse.Query(AcademicEntry);
+   query.equalTo('section', req.query['category']);
+   query.find()
+       .then(data => {
+           res.send(data);
+       }).catch(error => console.log('Error: ', error));
 });

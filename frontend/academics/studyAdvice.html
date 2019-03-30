@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
     <title>RateND</title>
@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="../pagestyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="../app.js"></script>
     
 </head>
 
-<body>   
+<body ng-controller="studyAdviceController">   
     <header class="header">
         <div class="pull-left">
             <div id="headText" class="container">
@@ -38,10 +41,10 @@
               <a class="nav-link" id="nav-text" href="../index.html">Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" id="nav-text" href="../academics/academics.html">Academics<span class="sr-only">(current)</span> </a>
+              <a class="nav-link" id="nav-text" href="academics.html">Academics<span class="sr-only">(current)</span> </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="nav-text" href="ecs.html">Extracurriculars</a>
+              <a class="nav-link" id="nav-text" href="../ecs/ecs.html">Extracurriculars</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="nav-text" href="../food/food.html">Food</a>
@@ -74,7 +77,7 @@
                         <a class="dropdown-item" href="#">Star rating (low-high)</a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-4">
+                <button type="button" class="btn btn-primary mt-4" onclick="(function(){document.location.href='../newpost.html'}());">
                     Write your own
                 </button>
 
@@ -82,36 +85,17 @@
 
           </div>
 
-          <div class="row my-5">
+          <div class="row my-5" ng-repeat="studyAdvice in studyAdvices">
             <div class="col">
                 <h1>
-                    Review 1
+                    {{ studyAdvice.title }}
                 </h1>
                 <h3>
-                    asdfasdf
+                    {{ studyAdvice.text }}
                 </h3>
             </div>
           </div>
-          <div class="row my-5">
-            <div class="col">
-                <h1>
-                    Review 2
-                </h1>
-                <h3>
-                    asdfasdf
-                </h3>
-            </div>
-          </div>
-        <div class="row my-5">
-            <div class="col">
-                <h1>
-                    Review 3
-                </h1>
-                <h3>
-                    asdfasdf
-                </h3>
-            </div>
-          </div>
+
       </div>
 
     <footer class="footer">
