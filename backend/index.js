@@ -20,10 +20,13 @@ app.use(express.static('../frontend'));
 
 
 app.get('/', (req, res)=>{
-    fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
+
+        fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
+
+
 });
 
 
@@ -66,7 +69,7 @@ app.post('/user', (req, res) => {
    user.set('username', username);
    user.set('password', password);
    user.set('email', email);
-   user.set('gradYear', year);
+   user.set('year', year);
    user.set('major', major);
    user.set('resHall', resHall);
    user.signUp().then(user => {
@@ -91,6 +94,7 @@ app.post('/login', (req, res) => {
             console.log('Logged in!');
            res.sendStatus(200)
        }).catch(error => console.log('Error: ', error));
+
 });
 
 app.get('/academicEntries', (req, res) => {
