@@ -94,11 +94,11 @@ app.post('/login', (req, res) => {
 
 });
 
-app.get('/academic_entries', (req, res) => {
+app.get('/academicEntries', (req, res) => {
    var AcademicEntry = Parse.Object.extend('AcademicEntry');
    console.log(req);
    var query = new Parse.Query(AcademicEntry);
-   query.equalTo('section', req.query['section']);
+   query.equalTo('section', req.query['category']);
    query.find()
        .then(data => {
            res.send(data);

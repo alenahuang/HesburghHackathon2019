@@ -66,8 +66,8 @@ app.controller('eventReviewsController', ["$scope", "$http", function($scope, $h
     });
 }]);
 
-
-
-app.controller('academicsController', ["$scope", "$http", function($scope, $http) {
-
+app.controller('academicsClassController', ["$scope", "$http", function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:"classReview"}}).then(function (res) {
+        $scope.classes = res.data;
+    });
 }]);
