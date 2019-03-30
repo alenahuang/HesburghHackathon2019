@@ -1,18 +1,15 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', []);
 
-app.config(function ($routeProvider) {
-	// TODO Routing
-	$routeProvider
-		.when('/', {
-			controller: 'main'
-		})
-});
 
-app.controller('main', ['$scope', '$http', function($scope, $http) {
+// app.config(function ($routeProvider) {
+// 	// TODO Routing
+// 	$routeProvider
+// 		.when('/', {
+// 			controller: 'main'
+// 		})
+// });
+
+app.controller('mainController', ["$scope", function($scope) {
 	$scope.title='RateND';
+    console.log($scope.title);
 }]);
-
-
-angular.module('app', [$scope])
-	.controller('main', function($scope) {
-	});
