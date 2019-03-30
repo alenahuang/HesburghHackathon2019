@@ -29,8 +29,11 @@ app.controller('loginController', ["$scope", "$http", function($scope, $http) {
 }]);
 
 app.controller('userCreationController', ["$scope", "$http", function($scope, $http) {
-    $scope.createUser = function(){
-        $http.post('/user').then(function(res){
+    $scope.createUser = function(username,password,email,year,major,resHall){
+        data = {"username":username,"password":password,"email":email,"year":year,"major":major,"resHall":resHall}
+
+        $http.post('/user',data,"application/json").then(function(res){
+            console.log("went through")
 
     });
 
