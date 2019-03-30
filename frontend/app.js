@@ -72,6 +72,7 @@ app.controller('academicsClassController', ["$scope", "$http", function($scope, 
     });
 }]);
 
+
 app.controller('submissionsController', ["$scope", "$http", function($scope, $http) {
     $scope.getAll = function(){
         var divs = document.querySelectorAll(".iWantThis");
@@ -84,4 +85,16 @@ app.controller('submissionsController', ["$scope", "$http", function($scope, $ht
         alert(theDiv.innerHTML)
 
     }
+}]);
+
+app.controller('studyAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'studyAdvice'}}).then(function (res) {
+        $scope.studyAdvices = res.data;
+    });
+}]);
+
+app.controller('careerAdviceController', ['$scope', '$http', function($scope, $http) {
+    $http.get('/academicEntries',{params:{category:'careerAdvice'}}).then(function (res) {
+        $scope.cadvices = res.data;
+    });
 }]);
