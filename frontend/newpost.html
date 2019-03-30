@@ -218,9 +218,28 @@
             </form>
         </div>
         <div class="container mt-4">
-            <form class="form-inline">
-                <button class="btn btn-secondary p-3" id="submitRev" type="submit" style="display: none;">Submit</button>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary classes"  type="submit" style="display: none;">Submit</button>
             </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary study"  type="submit" style="display: none;">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary career"  type="submit" style="display: none;">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none;">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary advice"  type="submit" style="display: none;">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary events"  type="submit" style="display: none;">Submit</button>
+            </form>
+            <form class="form-inline" method="POST">
+                <button class="btn btn-secondary review"  type="submit" style="display: none;">Submit</button>
+            </form>
+
 
         </div>
 
@@ -236,29 +255,35 @@
             function handleFirstClick(button) {
                 var classNames = ["aca", "ecs", "food"];
                 document.getElementsByClassName(button.id)[0].style.display = "block";
-                
+                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
                 classNames.splice(classNames.indexOf(button.id), 1);
                 for (i = 0; i < classNames.length; i++) {
                     document.getElementsByClassName(classNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(classNames[i])[1].style.display = "none";
                 }
 
-                var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
 
                 for (i = 0; i < individualClassNames.length; i++) {
                     document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(individualClassNames[i])[1].style.display = "none";
                     document.getElementById(individualClassNames[i]).classList.remove("active");
                 }
-                document.getElementById("submitRev").style.display = "none";
+
             }
             function handleSecondClick(button) {
                 var individualClassNames = ["classes", "study", "clubs", "advice", "career", "events", "review"];
-                document.getElementsByClassName(button.id)[0].style.display = "block";
-               
+                var elements = document.getElementsByClassName(button.id);
+                for (i = 0; i < elements.length; i++) {
+                    elements[i].style.display = "block";
+                }
                 individualClassNames.splice(individualClassNames.indexOf(button.id), 1);
+
                 for (i = 0; i < individualClassNames.length; i++) {
                     document.getElementsByClassName(individualClassNames[i])[0].style.display = "none";
+                    document.getElementsByClassName(individualClassNames[i])[1].style.display = "none";
                 }
-                document.getElementById("submitRev").style.display = "block";
+                
+
             }
         </script>
 
