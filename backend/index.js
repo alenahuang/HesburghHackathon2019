@@ -17,3 +17,9 @@ app.get('/', (req, res)=>{
     })
 })
 
+app.get('/asdf', (req, res)=>{
+    fs.readFile("../frontend/index.html",'utf8',(err,data)=>{
+        res.contentType("text/html");
+        res.send("LOLZ");
+    })
+})
