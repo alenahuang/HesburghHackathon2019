@@ -9,4 +9,5 @@
 .sect:hover {
 	color: white;
 	background-color: #F3969A;
+	cursor: pointer;
 }
