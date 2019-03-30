@@ -1,0 +1,130 @@
+<html lang="en" ng-app="app">
+
+    <head ng-controller="mainController">
+        <title>{{ title }}</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script src="/app.js"></script>
+    </head>
+
+    <body ng-controller="mainController">
+        <header class="header">
+            <div class="pull-left">
+                <div id="headText" class="container">
+                    <h1>RateND</h1>
+                </div>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-default btn-lg" aria-label="User">
+                    <span>Sign up</span>
+                    <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                    <div class="collapse navbar-collapse" id="navbarColor03">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" id="nav-text" href="#">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Academics</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Extracurriculars</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="nav-text" href="#">Wellness</a>
+                              </li>
+                            </ul>
+                          <div class="pull-right">
+                            <form class="form-inline my-2 my-lg-0">
+                              <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
+                              <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
+                            </form>
+                          </div>
+                          </div>
+            </div>
+        </nav>
+ 
+                <div class="container" id="signupbox">
+                   <div class="col-md-6 mx-auto text-center">
+                      <div class="header-title">
+                         <h1 class="wv-heading--title">
+                            Join the RateND community — it’s free!
+                         </h1>
+                         <h2 class="wv-heading--subtitle">
+                            Find what classes to sign up. 
+                         </h2>
+                         <h2 class="wv-heading--subtitle">
+                            Discover a new dining hall hack. 
+                         </h2>
+                         <h2 class="wv-heading--subtitle">
+                            Learn about events on campus. 
+                         </h2>
+                         <h2 class="wv-heading--subtitle">
+                            Add reviews & advice to help ND students.
+                         </h2>
+
+                      </div>
+                   </div>
+                      <div class="col-md-6 mx-auto">
+                          <h1>Sign Up</h1>
+                         <div class="myform form ">
+                            <form action="" method="post" name="signup">
+                               <div class="form-group">
+                                    <label>Your email</label>
+                                  <input type="email" name="email"  class="form-control my-input" id="email" placeholder="Email">
+                               </div>
+                               <div class="form-group">
+                                    <label>ND Introduction</label>
+                                    <input type="text" name="major"  class="form-control my-input" id="major" placeholder="Major">
+                                 </div>
+                               <div class="form-group">
+                                  <input type="number" min="0" name="gradYear" id="gradYear"  class="form-control my-input" placeholder="Graduation Year">
+                               </div>
+                               <div class="form-group">
+
+                                    <input type="text" name="resHall"  class="form-control my-input" id="resHall" placeholder="Residence Hall">
+                                 </div>
+                                 <div class="form-group">
+                                        <label>Your username</label>
+                                        <input type="text" name="username"  class="form-control my-input" id="username" placeholder="Username">
+                                     </div>
+                                 <div class="form-group">
+                                        <label>Your password</label>
+                                        <input class="form-control" placeholder="******" type="password">
+                                    </div> <!-- form-group// --> 
+                               <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block" id="loginbutton">Sign up </button>
+                                </div> <!-- form-group// -->    
+                                  </div>
+                               </div>
+                            </form>
+
+                      </div>
+                   </div>
+                </div>
+ 
+
+        <footer class="footer">
+            <div id="footText" class="container">
+                <p>2019 Hesburgh Hackathon. Created by Zach Sy, Patrick Soga, Peter Davis, and Alena Huang.</p>
+            </div>
+        </footer>
+
+
+    </body>
+
+</html>

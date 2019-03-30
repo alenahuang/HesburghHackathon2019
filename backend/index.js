@@ -14,10 +14,17 @@ app.use(bodyParser.json());
 app.use(express.static('../frontend'));
 // Routes
 app.get('/', (req, res)=>{
-    fs.readFile("../frontend/index.html",'utf8',(err,data)=>{
-        res.contentType("text/html");
-        res.send(data);
-    });
+    var currentUser = Parse.User.current();
+
+    if (currentUser){
+        fs.readFile("../frontend/index.html",'utf8',(err,data)=>{
+            res.contentType("text/html");
+            res.send(data);
+        });
+    }else{
+        res.redirect("/login")
+    }
+
 });
 
 app.get('/asdf', (req, res)=>{
@@ -69,12 +76,18 @@ app.post('/user', (req, res) => {
    res.sendStatus(200);
 });
 
+app.get('/login', (req, res) => {
+    fs.readFile("../frontend/login.html",'utf8',(err,data)=>{
+        res.contentType("text/html");
+        res.send(data);
+    });
+});
+
 app.post('/login', (req, res) => {
     var username = req.body.username;
     var password = req.body.password;
    const user = Parse.User.logIn(username, password)
        .then(usr => {
             console.log('Logged in!');
-            res.sendStatus(200);
        }).catch(error => console.log('Error: ', error));
 });
