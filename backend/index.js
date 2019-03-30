@@ -9,7 +9,8 @@ Parse.initialize('1UL4z4XXj5lcw7FqCZQDi9AEY9oBaCLDU1hlLsDI', 'wCS800zhokit6qVVcY
 Parse.serverURL = 'https://Parseapi.back4app.com/';
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static('../frontend'));
 // Routes
 app.get('/', (req, res)=>{
@@ -46,6 +47,7 @@ app.get('/reviews', (req, res) => {
 
 
 app.post('/user', (req, res) => {
+    console.log(req)
    var user = new Parse.User();
    var username = req.body.username;
    var password = req.body.password;
@@ -60,12 +62,11 @@ app.post('/user', (req, res) => {
    user.set('year', year);
    user.set('major', major);
    user.set('resHall', resHall);
-
    user.signUp().then(user => {
       var sessionToken = user.getSessionToken();
    }).catch(error => console.log('Error: ', error));
 
-   res.end('User created!');
+   res.sendStatus(200);
 });
 
 app.get('/login', (req, res) => {

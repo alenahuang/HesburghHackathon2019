@@ -59,20 +59,20 @@
         </nav>
 
         <div ng-controller="userCreationController">
-        <form>
+        <form method="POST" name="userCreate">
             First name: <br>
-            <input type="text" name="Username" ><br>
+            <input type="text" ng-model="username" ><br>
             Last name: <br>
-            <input type="text" name="Password"><br>        
+            <input type="text" ng-model="password"><br>
             Email: <br>
-            <input type="text" name="Email"><br>  
+            <input type="text" ng-model="email"><br>
             Year: <br>
-            <input type="text" name="Year"><br>  
+            <input type="text" ng-model="year"><br>
             Major: <br>
-            <input type="text" name="Major"><br> 
+            <input type="text" ng-model="major"><br>
             Res Hall: <br>
-            <input type="text" name="ResHall"><br>  
-            <button type="submit" name="Submit" ng-click="createUser()">SUBMIT</button>
+            <input type="text" ng-model="resHall"><br>
+            <input type="button" value="submit" ng-click="createUser(username,password,email,year,major,resHall)">SUBMIT</button>
         </form>
         </div>
 
