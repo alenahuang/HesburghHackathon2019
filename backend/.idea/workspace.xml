@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78dd72b7-ca50-4cc4-a4a9-2b37f104eb5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/PATENTS" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/PATENTS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/dist/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/dist/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/dist/parse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/dist/parse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/AnonymousUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/AnonymousUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Cloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Cloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/CloudCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/CloudCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/CoreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/CoreManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/EventEmitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/EventEmitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/FacebookUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/FacebookUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/InstallationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/InstallationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LiveQueryClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LiveQueryClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LiveQuerySubscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LiveQuerySubscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/LocalDatastoreUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ObjectStateMutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ObjectStateMutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/OfflineQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/OfflineQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseACL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseACL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseError.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseGeoPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseGeoPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseInstallation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseInstallation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseLiveQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseLiveQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseOp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseOp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParsePolygon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParsePolygon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseRelation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseRelation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseRole.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/ParseUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Push.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Push.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/RESTController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/RESTController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/SingleInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/SingleInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/Storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/StorageController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/TaskQueue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/TaskQueue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/UniqueInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/UniqueInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/arrayContainsObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/arrayContainsObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/canBeSerialized.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/canBeSerialized.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/decode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/decode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/encode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/encode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/equals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/equals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/escape.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/escape.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/isRevocableSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/isRevocableSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/parseDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/parseDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/promiseUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/promiseUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/unique.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/unique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/browser/unsavedChildren.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/browser/unsavedChildren.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/AnonymousUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/AnonymousUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/Cloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/Cloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/CloudCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/CloudCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/CoreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/CoreManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/EventEmitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/EventEmitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/FacebookUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/FacebookUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/InstallationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/InstallationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LiveQueryClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LiveQueryClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LiveQuerySubscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LiveQuerySubscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/LocalDatastoreUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ObjectStateMutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ObjectStateMutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/OfflineQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/OfflineQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/Parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/Parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseACL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseACL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseError.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseGeoPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseGeoPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseInstallation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseInstallation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseLiveQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseLiveQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseOp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseOp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParsePolygon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParsePolygon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseRelation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseRelation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseRole.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/ParseUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/Push.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/Push.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/RESTController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/RESTController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/SingleInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/SingleInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/Storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/Storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/StorageController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/TaskQueue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/TaskQueue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/UniqueInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/UniqueInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/arrayContainsObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/arrayContainsObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/canBeSerialized.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/canBeSerialized.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/decode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/decode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/encode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/encode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/equals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/equals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/escape.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/escape.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/isRevocableSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/isRevocableSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/parseDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/parseDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/promiseUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/promiseUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/unique.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/unique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/node/unsavedChildren.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/node/unsavedChildren.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/AnonymousUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/AnonymousUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Cloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Cloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/CloudCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/CloudCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/CoreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/CoreManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/EventEmitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/EventEmitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/FacebookUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/FacebookUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/InstallationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/InstallationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LiveQueryClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LiveQueryClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LiveQuerySubscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LiveQuerySubscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/LocalDatastoreUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ObjectStateMutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ObjectStateMutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/OfflineQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/OfflineQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseACL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseACL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseError.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseGeoPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseGeoPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseInstallation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseInstallation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseLiveQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseLiveQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseOp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseOp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParsePolygon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParsePolygon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseRelation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseRelation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseRole.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/ParseUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Push.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Push.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/RESTController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/RESTController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/SingleInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/SingleInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/Storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/StorageController.react-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/TaskQueue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/TaskQueue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/UniqueInstanceStateController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/UniqueInstanceStateController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/arrayContainsObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/arrayContainsObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/canBeSerialized.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/canBeSerialized.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/decode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/decode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/encode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/encode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/equals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/equals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/escape.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/escape.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/isRevocableSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/isRevocableSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/parseDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/parseDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/promiseUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/promiseUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/unique.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/unique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/unsavedChildren.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/lib/react-native/unsavedChildren.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/parse/react-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/parse/react-native.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="455229691">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="101" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="101" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78dd72b7-ca50-4cc4-a4a9-2b37f104eb5a" name="Default Changelist" comment="" />
+      <created>1553909455657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553909455657</updated>
+      <workItem from="1553909456828" duration="1777000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1777000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1057" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3628602" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
