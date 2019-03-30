@@ -14,10 +14,6 @@
     </head>
 
     <body ng-controller="mainController">
-        <button ng-click="test()">CLICK ME</button>
-        <div ng-repeat="advice in advices">        
-            {{advice}}
-        </div>
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -58,6 +54,12 @@
             </div>
         </nav>
 
+
+        <div ng-controller="adviceController">
+            <div ng-repeat="advice in advices">
+               a: {{ advice.objectId }}
+            </div>
+        </div>
 
         <footer class="footer">
             <div id="footText" class="container">
