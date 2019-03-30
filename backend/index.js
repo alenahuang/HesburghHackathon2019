@@ -20,10 +20,21 @@ app.use(express.static('../frontend'));
 
 
 app.get('/', (req, res)=>{
-    fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
+    Parse.User.enableUnsafeCurrentUser();
+           Parse.User.become(Parse.Session.sessionToken).then(function (user) {
+               console.log(user)// The current user is now set to user.
+           }, function (error) {
+               console.log(error) // The token could not be validated.
+           });var currentUser = Parse.User.current()
+    if(currentUser){
+        fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
+    }else{
+        res.redirect("/login")
+    }
+
 });
 
 
