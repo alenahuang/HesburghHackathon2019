@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 const Parse = require('Parse/node');
 const bodyParser = require('body-Parser');
-const port = 3000;
+const port = 5000;
 
 Parse.initialize('1UL4z4XXj5lcw7FqCZQDi9AEY9oBaCLDU1hlLsDI', 'wCS800zhokit6qVVcY7dvJdunL0yAuIDKe2em9sV');
 Parse.serverURL = 'https://Parseapi.back4app.com/';
@@ -15,20 +15,20 @@ app.use(express.static('../frontend'));
 // Routes
 app.get('/', (req, res)=>{
     var currentUser = Parse.User.current();
-
     if (currentUser){
-        fs.readFile("../frontend/index.html",'utf8',(err,data)=>{
+        fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
     }else{
-        res.redirect("/login")
+        res.redirect('/asdf');
+//        res.redirect('/asdf')
     }
 
 });
 
 app.get('/asdf', (req, res)=>{
-    res.send("LOLSBEAUTIFUL");
+    res.send('LOLISBEAUTIFUL');
 });
 
 app.get('/advices', (req, res) => {
@@ -86,8 +86,10 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     var username = req.body.username;
     var password = req.body.password;
-   const user = Parse.User.logIn(username, password)
+    const user = Parse.User.logIn(username, password)
        .then(usr => {
-            console.log('Logged in!');
+           res.redirect('/');
+           console.log('Logged in!');
        }).catch(error => console.log('Error: ', error));
+
 });
