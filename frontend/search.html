@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col m-0 p-0">
                     <h1>
-                        Reviews containing {{usersearch}} : 
+                        Reviews containing {{ keyword }} : 
                     </h1>
                 </div>
                 <div class="col text-right m-0 p-0">
@@ -85,44 +85,46 @@
 
             </div>
 
-            <div class="row my-5" ng-repeat="review in reviews">
+            <div class="row my-5" ng-repeat="data in allData">
                 <div class="col">
                     <h1>
-                        {{review.user.username}} | {{review.location}} | Stars: {{review.stars}}
+                        {{data.userUsername}} | {{data.location}} | Stars: {{data.stars}}
                     </h1>
                     <h3>
-                        {{review.text}}
+                        {{data.text}}
+                        {{data.experience}}
+                        {{data.advice}}
                     </h3>
                     <h3>
-                        Upvotes: {{review.upvotes}}
+                        Upvotes: {{data.upvotes}}
                     </h3>
                     <h3>
-                        Downvotes: {{review.downvotes}}
+                        Downvotes: {{data.downvotes}}
                     </h3>
                 </div>
             </div>
             <div class="row">
                 <h1>
-                    Advice containing {{usersearch}} : 
+                    Advice containing {{keyword}} : 
                 </h1>
             </div>
             <div class="row my-5" ng-repeat="advice in advices">
                 <div class="col">
                     <div class="row" id="toptext">
-                        <h4>{{ advice.user.username }} | {{ advice.user.dateTime }}</h4>
+                        <h4>{{ data.userUsername }} | {{ data.timestamp }}</h4>
                     </div>
                     <div class="row" id="midtext">
-                        <h4>{{ advice.text }}</h4>
+                        <h4>{{ data.text }} {{data.advice}} {{data.experience}}</h4>
                     </div>
                     <div class="row" id="thumbupdown">
                         <div class="thumb">
                             <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
-                            <span><h5>&ThinSpace;{{ advice.upvotes }}</h5></span>
+                            <span><h5>&ThinSpace;{{ data.upvotes }}</h5></span>
                         </div>
                         &ThickSpace;
                         <div class="thumb">
                             <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
-                            <span><h5>&ThinSpace;{{ advice.downvotes }}</h5></span>
+                            <span><h5>&ThinSpace;{{ data.downvotes }}</h5></span>
                         </div>
                     </div>
     

@@ -6,13 +6,19 @@ app.controller('mainController', ["$scope", "$http","$window", function($scope, 
     $scope.a = '';
     $scope.username = "Anonymous"
 
+    $scope.allData = [];
+    $scope.keyword = '';
+
     $http.get("/userInfo/username").then(function(res){
         $scope.username = res.data;
     })
 
-    $scope.searchByKeyword = function() {
-
-        $http.get('/asdf', $scope.title).then(function (res) {
+    $scope.searchByKeyword = function(keyword) {
+        data={"keyword": keyword};
+        $scope.keyword = keyword;
+        $scope.allData = $http.post('/search', data, 'application/json').then((res) => {
+            console.log($scope.allData);
+            $window.location.href = '/search.html';
         });
     }
 

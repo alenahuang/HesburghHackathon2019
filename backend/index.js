@@ -229,8 +229,66 @@ app.get('/logout', (req, res) => {
 });
 
 app.post('/logout', (req, res) => {
-   Parse.User.logOut().then(() => {
+    Parse.User.logOut().then(() => {
        var currentUser = Parse.User.current();
        res.sendStatus(200);
-   }).catch(error => console.log('Error: ', error));
+    }).catch(error => console.log('Error: ', error));
+});
+
+app.post('/search', (req, res) => {
+    var allData = [];
+    var textData = [];
+    var keyword = req.body.keyword;
+
+    var AcademicEntry = Parse.Object.extend('AcademicEntry');
+    var Advice = Parse.Object.extend('Advice');
+    var Review = Parse.Object.extend('Review');
+
+    var query = new Parse.Query(AcademicEntry);
+    var queryAdvice = new Parse.Query(Advice);
+    var queryReview = new Parse.Query(Review);
+
+    query.find()
+        .then(academicEntry => {
+            return academicEntry;
+        })
+        .then(function(result) {
+            queryAdvice.find()
+                .then(entry => {
+                    return entry.concat(result);
+                })
+                .then(function(nearFinal) {
+                    queryReview.find()
+                        .then(entry => {
+                            return entry.concat(nearFinal);
+                        })
+                        .then(function(finale) {
+                            allData = Object.values(finale);
+                            allData.forEach(data => {
+                               if (!(data.get('experience') === undefined))
+                               {
+                                   if (data.get('experience').includes(keyword)) {
+                                       textData.push(data.get('experience'));
+                                   }
+                               }
+                               else if (!(data.get('advice') === undefined))
+                               {
+                                   if (data.get('advice').includes(keyword)) {
+                                       textData.push(data.get('advice'));
+                                   }
+                               }
+                               else if (!(data.get('text') === undefined))
+                               {
+                                   let key = keyword.toLowerCase();
+                                   if (data.get('text').toLowerCase().includes(key)) {
+                                       console.log('Hit!');
+                                       textData.push(data.get('text'));
+                                   }
+                               }
+
+                            });
+                            res.send([textData, keyword]);
+                        });
+                });
+        });
 });
