@@ -2,4 +2,4 @@ TODO:
 	- Log out
 	- Search
 	- save users
-	- fix stars
+	- increment like and dislike
