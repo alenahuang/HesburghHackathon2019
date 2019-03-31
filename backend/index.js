@@ -171,8 +171,10 @@ app.post('/makeAcademicEntry', (req, res) => {
 });
 
 app.post('/makeAdvice', (req, res) => {
+    var user = Parse.User.current();
     var Advice = Parse.Object.extend('Advice');
     var aadvice = new Advice();
+    aadvice.set('user', user);
     aadvice.set('text', req.body.advice);
     var today = new Date();
     aadvice.set('timestamp', today);
