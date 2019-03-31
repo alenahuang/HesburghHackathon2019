@@ -13,16 +13,16 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController">
+    <body ng-controller="mainController" ng-controller="submissionsController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
-                    <h1>RateND</h1>
+                    <h1>{{title}}</h1>
                 </div>
             </div>
             <div class="pull-right">
                 <button type="button" class="btn btn-default btn-lg" aria-label="User">
-                    <span>Hello, User Name</span>
+                   <span>Hello {{username}}</span>
                     <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
                 </button>
             </div>
@@ -109,14 +109,14 @@
         
         <!-- food subcategories -->
         <div class="container mt-4 food" style="display: none;">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
-                          <input type="radio" name="options" autocomplete="off">Review
-                        </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
-                          <input type="radio" name="options" autocomplete="off">Advice
-                        </label>
-                </div>                     
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
+                    <input type="radio" name="options" autocomplete="off">Review
+                </label>
+                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
+                    <input type="radio" name="options" autocomplete="off">Advice
+                </label>
+            </div>                     
         </div>
 
         <!-- academic forms- class -->
@@ -150,9 +150,10 @@
                         <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="studyAdvice"></textarea>
                     </div>
                 </form>
+
         </div>
         <!-- academic forms- career -->
-        <div class="container mt-4 aca career" style="display: none;">
+        <div class="iWantThis container mt-4 aca career" style="display: none;">
             <h2>Academics- Career Advice</h2>
             <h5>career advice.</h5>
             <form>
@@ -191,7 +192,7 @@
                 </form>
         </div>
         <!-- food-review forms -->
-        <div class="container food review mt-4" style="display: none;">
+        <div class="iWantThis container food review mt-4" style="display: none;">
             <h2>Food- Reviews</h2>
             <h5>food reviews.</h5>
             <form>
@@ -208,7 +209,7 @@
             </form>
         </div>
         <!-- food-advice forms -->
-        <div class="container food advice mt-4" style="display: none;">
+        <div class="iWantThis container food advice mt-4" style="display: none;">
             <h2>Food- Advice</h2>
             <h5>Share your dining hall hacks, healthy recipes, your favorite snacks from the Huddle, etc.</h5>
             <form>

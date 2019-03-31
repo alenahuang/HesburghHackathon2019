@@ -20,15 +20,23 @@ app.use(express.static('../frontend'));
 
 
 app.get('/', (req, res)=>{
-    fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
+    var currentUser = Parse.User.current()
+    if(currentUser){
+        fs.readFile("../frontend/home.html",'utf8',(err,data)=>{
             res.contentType("text/html");
             res.send(data);
         });
+    }else{
+        res.redirect("/login")
+    }
+
 });
 
 
-app.get('/asdf', (req, res)=>{
-    res.send('LOLISBEAUTIFUL');
+app.get('/username', (req, res)=>{
+    var currentUser = Parse.User.current()
+    var username = currentUser.get("username");
+    res.send(username)
 });
 
 app.get('/advices', (req, res) => {
@@ -71,6 +79,7 @@ app.post('/user', (req, res) => {
    user.set('resHall', resHall);
    user.signUp().then(user => {
       var sessionToken = user.getSessionToken();
+      console.log('User signed up!');
    }).catch(error => console.log('Error: ', error));
 
    res.sendStatus(200);
@@ -78,6 +87,7 @@ app.post('/user', (req, res) => {
 
 app.get('/login', (req, res) => {
     fs.readFile("../frontend/login.html",'utf8',(err,data)=>{
+        console.log('User logged in!');
         res.contentType("text/html");
         res.send(data);
     });
@@ -88,8 +98,15 @@ app.post('/login', (req, res) => {
     var password = req.body.password;
     const user = Parse.User.logIn(username, password)
        .then(usr => {
-            console.log('Logged in!');
-           res.sendStatus(200)
+           Parse.User.enableUnsafeCurrentUser()
+           var sessionToken = usr.getSessionToken();
+           Parse.User.become(sessionToken).then(function (user) {
+               console.log('Logged in!');
+               res.sendStatus(200)
+           }, function (error) {
+  // The token could not be validated.
+           });
+
        }).catch(error => console.log('Error: ', error));
 
 });

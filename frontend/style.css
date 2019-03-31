@@ -62,6 +62,35 @@ body {
     font-size: 1.5em;
 }
 
+#thumbs {
+    color: #4eac92;
+    font-size: 1.5em;
+    display:inline;
+}
+
+#thumbupdown {
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.thumb:hover{
+    cursor:pointer;
+}
+
+#thumbupdown h5 {
+    color: #4eac92;
+}
+
+#toptext {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#midtext {
+    padding-left: 10px;
+}
+
 #categoriesradio {
     font-size: 1.2em;
     padding-top: 5px;

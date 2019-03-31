@@ -4,6 +4,11 @@ var app = angular.module('app', []);
 app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 	$scope.title='RateND';
     $scope.a = '';
+    $scope.username = "lol"
+
+    $http.get("/username").then(function(res){
+        $scope.username = res.data;
+    })
     $scope.searchByKeyword = function() {
 
         $http.get('/asdf', $scope.title).then(function (res) {
@@ -40,10 +45,21 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
 
 }]);
 
-app.controller('reviewsController', ["$scope", "$http", function($scope, $http) {
+app.controller('reviewsController', ["$scope", "$http","orderByFilter", function($scope, $http, orderBy) {
     $http.get('/reviews',{"params":{"category":"food"}}).then(function (res) {
         $scope.reviews = res.data;
     });
+
+    $scope.upvotes = function(){
+        $scope.reviews = orderBy($scope.reviews, "upvotes", true);
+    }
+     $scope.stars = function(most){
+         if(most){
+              $scope.reviews = orderBy($scope.reviews, "stars", true);
+         }else{
+              $scope.reviews = orderBy($scope.reviews, "stars", false);
+         }
+    }
 }]);
 
 app.controller('adviceController', ["$scope", "$http", function($scope, $http) {
