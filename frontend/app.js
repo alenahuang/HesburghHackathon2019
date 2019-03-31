@@ -71,6 +71,52 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
 
 }]);
 
+app.controller('submissionController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+
+    $scope.classes = function(classTitle, professor, course, classExp) {
+        data = {"title": classTitle, "professor": professor, "course": course, "classExp": classExp, "section": "classReview"}
+        $http.post('/makeAcademicEntry', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
+    }
+    $scope.study = function(studyTitle, studyAdvice) {
+        data = {"title": studyTitle, "studyAdvice": studyAdvice, "section": "studyAdvice"};
+        $http.post('/makeAcademicEntry', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
+    }
+    $scope.career = function(careerTitle, careerAdvice) {
+        data = {"title": careerTitle, "careerAdvice": careerAdvice, "section": "careerAdvice"};
+        $http.post('/makeAcademicEntry', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
+    }
+    $scope.clubs = function(clubsExp, title) {
+        data = {"advice": clubsExp, "title": title, "section": "clubs"};
+        $http.post('/makeAdvice', data, 'applcation/json').then(res => {
+           $window.location.href = '/';
+        });
+    }
+    $scope.events = function(ecStars, event, ecsExp) {
+        data = {"review": ecsExp, "location": event, "section": "events"};
+        $http.post('/makeReview', data, 'application/json').then(res => {
+           $window.location.href = '/';
+        });
+    }
+    $scope.review = function(foodStars, place, foodExp) {
+        data = {"review": foodExp, "location": place, "stars": foodStars, "section": "food"};
+        $http.post('/makeReview', data, 'application/json').then(res => {
+            $window.location.href = '/';
+        });
+    }
+    $scope.advice = function(foodAdvice, title) {
+        data = {"advice": foodAdvice, "title": title, "section": "food"};
+        $http.post('/makeAdvice', data, 'application/json').then(res => {
+            $window.location.href = '/';
+        });
+    }
+}]);
+
 app.controller('reviewsController', ["$scope", "$http","orderByFilter", function($scope, $http, orderBy) {
     $http.get('/reviews',{"params":{"category":"food"}}).then(function (res) {
         $scope.reviews = res.data;
