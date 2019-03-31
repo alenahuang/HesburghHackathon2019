@@ -238,3 +238,20 @@ app.controller('careerAdviceController', ['$scope', '$http',"orderByFilter", fun
     }
 }]);
 
+app.controller('logoutController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+   $scope.logout = function() {
+
+       $http.get('/logout').then(function (res) {
+          isLoggedIn = res.data;
+           if (isLoggedIn) {
+               $http.post('/logout').then(function (res) {
+                   $window.location.href = '/login';
+               });
+           }
+           else {
+
+           }
+       });
+   }
+}]);
+
