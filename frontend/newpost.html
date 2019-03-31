@@ -204,6 +204,10 @@
                 <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
                 <form>
                     <div class="form-group">
+                        <h3>Club:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="title"></textarea>
+                    </div>
+
+                    <div class="form-group">
                         <textarea class="form-control" id="textForm" rows="3" ng-model="clubsExp"></textarea>
                     </div>
                 </form>
@@ -256,7 +260,7 @@
                 <button class="btn btn-secondary events"  type="submit" style="display: none; font-size:1.6em;" ng-click="events(event, ecsExp, ecStars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(clubsExp, title)">Submit</button>
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(title, clubsExp)">Submit</button>
             </form>
             <form class="form-inline">
                 <button class="btn btn-secondary review"  type="submit" style="display: none; font-size:1.6em;" ng-click="review(place, foodExp, foodStars)">Submit</button>
