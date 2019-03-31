@@ -17,6 +17,9 @@ app.controller('mainController', ["$scope", "$http","$window", function($scope, 
         data={"keyword": keyword};
         $scope.keyword = keyword;
         $scope.allData = $http.post('/search', data, 'application/json').then((res) => {
+            $scope.keyword = res[1];
+            $scope.allData = res[0];
+            console.log($scope.keyword);
             console.log($scope.allData);
             $window.location.href = '/search.html';
         });
