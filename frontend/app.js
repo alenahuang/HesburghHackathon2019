@@ -37,7 +37,6 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
         data = {"username":username,"password":password,"email":email,"year":year,"major":major,"resHall":resHall}
 
         $http.post('/user',data,"application/json").then(function(res){
-            alert("LOL")
 
     });
 
@@ -53,6 +52,10 @@ app.controller('reviewsController', ["$scope", "$http","orderByFilter", function
     $scope.upvotes = function(){
         $scope.reviews = orderBy($scope.reviews, "upvotes", true);
     }
+
+    $scope.newest = function(){
+        $scope.reviews = orderBy($scope.reviews, "createdAt", true);
+    }
      $scope.stars = function(most){
          if(most){
               $scope.reviews = orderBy($scope.reviews, "stars", true);
@@ -62,41 +65,103 @@ app.controller('reviewsController', ["$scope", "$http","orderByFilter", function
     }
 }]);
 
-app.controller('adviceController', ["$scope", "$http", function($scope, $http) {
+app.controller('adviceController', ["$scope", "$http", "orderByFilter", function($scope, $http, orderBy) {
     $http.get('/advices',{params:{"category":"food"}}).then(function (res) {
         $scope.advices = res.data;
     });
+
+    $scope.upvotes = function(){
+        $scope.advices = orderBy($scope.advices, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.advices = orderBy($scope.advices, "createdAt", true);
+    }
 }]);
 
 // Extracurriculars
 
-app.controller('clubsAdviceController', ["$scope", "$http", function($scope, $http) {
+app.controller('clubsAdviceController', ["$scope", "$http", "orderByFilter", function($scope, $http, orderBy) {
     $http.get('/advices',{params:{category:"clubs"}}).then(function (res) {
         $scope.advices = res.data;
     });
+
+
+    $scope.upvotes = function(){
+        $scope.advices = orderBy($scope.advices, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.advices = orderBy($scope.advices, "createdAt", true);
+    }
 }]);
 
-app.controller('eventReviewsController', ["$scope", "$http", function($scope, $http) {
+app.controller('eventReviewsController', ["$scope", "$http","orderByFilter", function($scope, $http, orderBy) {
     $http.get('/reviews',{params:{category:"events"}}).then(function (res) {
         $scope.reviews = res.data;
     });
+
+    $scope.upvotes = function(){
+        $scope.reviews = orderBy($scope.reviews, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.reviews = orderBy($scope.reviews, "createdAt", true);
+    }
+     $scope.stars = function(most){
+         if(most){
+              $scope.reviews = orderBy($scope.reviews, "stars", true);
+         }else{
+              $scope.reviews = orderBy($scope.reviews, "stars", false);
+         }
+    }
+
 }]);
 
-app.controller('academicsClassController', ["$scope", "$http", function($scope, $http) {
+app.controller('academicsClassController', ["$scope", "$http","orderByFilter", function($scope, $http,orderBy) {
     $http.get('/academicEntries',{params:{category:"classReview"}}).then(function (res) {
         $scope.classes = res.data;
     });
+     $scope.upvotes = function(){
+        $scope.classes = orderBy($scope.classes, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.classes = orderBy($scope.classes, "createdAt", true);
+    }
+     $scope.stars = function(most){
+         if(most){
+              $scope.classes = orderBy($scope.classes, "stars", true);
+         }else{
+             $scope.classes = orderBy($scope.classes, "stars", false);
+         }
+    }
 }]);
 
-app.controller('studyAdviceController', ['$scope', '$http', function($scope, $http) {
+app.controller('studyAdviceController', ['$scope', '$http', "orderByFilter", function($scope, $http, orderBy) {
     $http.get('/academicEntries',{params:{category:'studyAdvice'}}).then(function (res) {
         $scope.studyAdvices = res.data;
     });
+
+    $scope.upvotes = function(){
+        $scope.studyAdvices= orderBy($scope.studyAdvices, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.studyAdvices = orderBy($scope.studyAdvices, "createdAt", true);
+    }
 }]);
 
-app.controller('careerAdviceController', ['$scope', '$http', function($scope, $http) {
+app.controller('careerAdviceController', ['$scope', '$http',"orderByFilter", function($scope, $http,orderBy) {
     $http.get('/academicEntries',{params:{category:'careerAdvice'}}).then(function (res) {
         $scope.cadvices = res.data;
     });
+    $scope.upvotes = function(){
+        $scope.cadvices= orderBy($scope.cadvices, "upvotes", true);
+    }
+
+    $scope.newest = function(){
+        $scope.cadvices = orderBy($scope.cadvices, "createdAt", true);
+    }
 }]);
 
