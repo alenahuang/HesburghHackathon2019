@@ -1,3 +1,5 @@
 TODO: 
-	- User profiles and login
-	- New controllers
+	- Log out
+	- Search
+	- save users
+	- fix stars
