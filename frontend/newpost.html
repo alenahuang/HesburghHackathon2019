@@ -13,7 +13,7 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController" ng-controller="submissionsController">
+    <body ng-controller="mainController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -64,7 +64,7 @@
         <div class="container">
             <h1>Add A Review or Advice</h1>
         </div>
-
+        <div  ng-controller="submissionController">
         <!-- general categories -->
         <div class="container mt-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -125,7 +125,7 @@
                 <h5>classes</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="title"></textarea>
+                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                     </div>
                     <div class="form-group">
                          <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="professor"></textarea>
@@ -154,7 +154,7 @@
                 <h5>Share your strategies on how to study and stay on top of things.</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="title"></textarea>
+                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                     </div>
                     <div class="form-group">
                         <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="studyAdvice"></textarea>
@@ -168,7 +168,7 @@
             <h5>career advice.</h5>
             <form>
                 <div class="form-group mt-4">
-                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="title"></textarea>
+                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                 </div>
                 <div class="form-group">
                     <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="careerAdvice"></textarea>
@@ -244,6 +244,7 @@
         </div>
         <div class="container mt-4">
             <form class="form-inline">
+<<<<<<< HEAD
                 <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(title, professor, course, classExp, stars)">Submit</button>
             </form>
             <form class="form-inline">
@@ -263,9 +264,31 @@
             </form>
             <form class="form-inline">
                 <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="advice(foodAdvice, title)">Submit</button>
+=======
+                <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(atitle, professor, course, classExp)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary study"  type="submit" style="display: none;" ng-click="study(atitle, studyAdvice)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary career"  type="submit" style="display: none;" ng-click="career(atitle, careerAdvice)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary events"  type="submit" style="display: none;" ng-click="events(ecStars, event, ecsExp)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none;" ng-click="clubs(clubsExp, atitle)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary review"  type="submit" style="display: none;" ng-click="review(foodStars, place, foodExp)">Submit</button>
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="advice(foodAdvice, atitle)">Submit</button>
+>>>>>>> master
             </form>
 
 
+        </div>
         </div>
 
         <footer class="footer">
