@@ -211,3 +211,22 @@ app.post('/makeReview', (req, res) => {
             }
         )).catch(error => console.log('Error: ', error));
 });
+
+app.get('/logout', (req, res) => {
+   var user = Parse.User.current();
+   var isLoggedIn = true;
+   if (user===undefined) {
+       isLoggedIn = false;
+       res.send(isLoggedIn);
+   }
+   else {
+       res.send(isLoggedIn);
+   }
+});
+
+app.post('/logout', (req, res) => {
+   Parse.User.logOut().then(() => {
+       var currentUser = Parse.User.current();
+       res.sendStatus(200);
+   }).catch(error => console.log('Error: ', error));
+});
