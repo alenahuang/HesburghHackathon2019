@@ -174,7 +174,7 @@ app.post('/makeAcademicEntry', (req, res) => {
 app.post('/makeAdvice', (req, res) => {
     // var user = Parse.User.current();
     var Advice = Parse.Object.extend('Advice');
-    var aadvice = new Advice();
+    var aadvice = new Parse.Advice();
     aadvice.set('user', Parse.User.current());
     aadvice.set('userUsername', Parse.User.current().get('username'));
     aadvice.set('text', req.body.advice);
@@ -215,6 +215,27 @@ app.post('/makeReview', (req, res) => {
             }
         )).catch(error => console.log('Error: ', error));
 });
+
+app.post('/thumbs',(req,res)=>{
+    var postType = req.body.postType
+    // var postRequest = Parse.Object.extend(postType);
+    var query = new Parse.Query(postType)
+    query.equalTo('objectId', req.body.postID);
+    query.first()
+         .then((entry => {
+             entry.save().then(entry =>{
+                 if(req.body.up){
+                     entry.set("upvotes", req.body.count+1)
+                 }else{
+                     entry.set("downvotes", req.body.count+1)
+                 }
+
+                 return entry.save()
+             })
+         })).then((entry =>{
+             res.sendStatus(200)
+         })).catch(error => console.log('Error: ', error));
+})
 
 app.get('/logout', (req, res) => {
    var user = Parse.User.current();

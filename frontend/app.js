@@ -10,10 +10,8 @@ app.controller('mainController', ["$scope", "$http","$window", function($scope, 
         $scope.username = res.data;
     })
 
-    $scope.searchByKeyword = function() {
-
-        $http.get('/asdf', $scope.title).then(function (res) {
-        });
+    $scope.searchByKeyword = function(keyword) {
+        alert(keyword)
     }
 
     $scope.test = function() {
@@ -135,6 +133,20 @@ app.controller('reviewsController', ["$scope", "$http","orderByFilter", function
               $scope.reviews = orderBy($scope.reviews, "stars", false);
          }
     }
+
+     $scope.thumbs = function(thePost,count,up){
+        var data = {"category":"classReview","count":count,"postType":"Review","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.reviews.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
+    }
 }]);
 
 app.controller('adviceController', ["$scope", "$http", "orderByFilter", function($scope, $http, orderBy) {
@@ -148,6 +160,20 @@ app.controller('adviceController', ["$scope", "$http", "orderByFilter", function
 
     $scope.newest = function(){
         $scope.advices = orderBy($scope.advices, "createdAt", true);
+    }
+
+     $scope.thumbs = function(thePost,count,up){
+        var data = {"category":"classReview","count":count,"postType":"Advice","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.advices.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
     }
 }]);
 
@@ -165,6 +191,20 @@ app.controller('clubsAdviceController', ["$scope", "$http", "orderByFilter", fun
 
     $scope.newest = function(){
         $scope.advices = orderBy($scope.advices, "createdAt", true);
+    }
+
+     $scope.thumbs = function(thePost,count,up){
+        var data = {"category":"classReview","count":count,"postType":"Advice","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.advices.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
     }
 }]);
 
@@ -188,6 +228,20 @@ app.controller('eventReviewsController', ["$scope", "$http","orderByFilter", fun
          }
     }
 
+    $scope.thumbs = function(thePost,count,up){
+        var data = {"category":"classReview","count":count,"postType":"Review","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.reviews.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
+    }
+
 }]);
 
 app.controller('academicsClassController', ["$scope", "$http","orderByFilter", function($scope, $http,orderBy) {
@@ -208,6 +262,21 @@ app.controller('academicsClassController', ["$scope", "$http","orderByFilter", f
              $scope.classes = orderBy($scope.classes, "stars", false);
          }
     }
+
+    $scope.thumbs = function(thePost,count,up){
+
+        var data = {"category":"classReview","count":count,"postType":"AcademicEntry","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.classes.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
+    }
 }]);
 
 app.controller('studyAdviceController', ['$scope', '$http', "orderByFilter", function($scope, $http, orderBy) {
@@ -222,6 +291,22 @@ app.controller('studyAdviceController', ['$scope', '$http', "orderByFilter", fun
     $scope.newest = function(){
         $scope.studyAdvices = orderBy($scope.studyAdvices, "createdAt", true);
     }
+
+    $scope.thumbs = function(thePost,count,up){
+
+        var data = {"category":"classReview","count":count,"postType":"AcademicEntry","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.studyAdvices.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
+    }
+
 }]);
 
 app.controller('careerAdviceController', ['$scope', '$http',"orderByFilter", function($scope, $http,orderBy) {
@@ -234,6 +319,21 @@ app.controller('careerAdviceController', ['$scope', '$http',"orderByFilter", fun
 
     $scope.newest = function(){
         $scope.cadvices = orderBy($scope.cadvices, "createdAt", true);
+    }
+
+
+    $scope.thumbs = function(thePost,count,up){
+        var data = {"category":"classReview","count":count,"postType":"AcademicEntry","postID":thePost,"up":up}
+        $http.post('/thumbs',data, 'application/json').then(res => {
+            var post = $scope.cadvices.find(function(item){
+                return item.objectId == thePost
+            })
+            if(up){
+                 post.upvotes = count+1
+             }else{
+                 post.downvotes = count+1
+             }
+        });
     }
 }]);
 
