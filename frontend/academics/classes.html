@@ -83,17 +83,31 @@
 
           </div>
 
-          <div class="row my-5" ng-repeat="class in classes">
+      <div class="row my-5" ng-repeat="class in classes">
             <div class="col">
-                <h1>
-                    {{class.course}} | {{class.professor}}
-                </h1>
-                <h3>
-                    {{class.experience}}
-                </h3>
+                <div class="row" id="toptext">
+                    <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
+                </div>
+                <div class="row" id="midtext">
+                    <h2>{{class.course}} | {{class.professor}}</h2>
+                </div>
+                <div class="row" id="midtext">
+                    <h4>{{class.experience}}</h4>
+                </div>
+                <div class="row" id="thumbupdown">
+                    <div class="thumb">
+                        <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                        <span><h5>&ThinSpace;{{ class.upvotes }}</h5></span>
+                    </div>
+                    &ThickSpace;
+                    <div class="thumb">
+                        <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                        <span><h5>&ThinSpace;{{ class.downvotes }}</h5></span>
+                    </div>
+                </div>
+
             </div>
           </div>
-      </div>
 
     <footer class="footer">
         <div id="footText" class="container">
