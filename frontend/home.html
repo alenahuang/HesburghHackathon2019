@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="pull-right">
-                <button type="button" class="btn btn-default btn-lg" aria-label="User">
+                <button type="button" class="btn btn-default btn-lg" aria-label="User" ng-click="gotoProfile()">
                     <span>Hello {{username}}</span>
                     <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
                 </button>
@@ -45,7 +45,7 @@
                                 <a class="nav-link" id="nav-text" href="/ecs/ecs.html">Extracurriculars</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" id="nav-text" href="food/food.html">Food</a>
+                                <a class="nav-link" id="nav-text" href="/food/food.html">Food</a>
                               </li>
                             </ul>
                           <div class="pull-right">
@@ -58,41 +58,40 @@
             </div>
         </nav>
 
-        <div ng-controller="userCreationController">
-        <form method="POST" name="userCreate">
-            Username: <br>
-            <input type="text" ng-model="username" ><br>
-            Password: <br>
-            <input type="text" ng-model="password"><br>
-            Email: <br>
-            <input type="text" ng-model="email"><br>
-            Year: <br>
-            <input type="text" ng-model="year"><br>
-            Major: <br>
-            <input type="text" ng-model="major"><br>
-            Res Hall: <br>
-            <input type="text" ng-model="resHall"><br>
-            <input type="button" value="submit" ng-click="createUser(username,password,email,year,major,resHall)">
-        </form>
-        </div>
+        <div class="container">
+                <div class="column text-center">
+                    <h1 style="">
+                            Join the RateND community — it’s <span class="text-secondary">free!</span>
+                         </h1>
+                         <h2 class="p-4" id="header1" style="opacity: 0; transition: 0.5s;">
+                            Find what classes to sign up. 
+                         </h2>
+                         <h2 class="p-4" id="header2" style="opacity: 0; transition: 0.5s;"> 
+                            Discover a new dining hall hack. 
+                         </h2>
+                         <h2 class="p-4" id="header3" style="opacity: 0; transition: 0.5s;">
+                            Learn about events on campus. 
+                         </h2>
+                         <h2 class="p-4" id="header4" style="opacity: 0; transition: 0.5s;">
+                            Add reviews & advice to help ND students.
+                         </h2>
+                         <h2 class="p-4" id="header5" style="opacity: 0; transition: 0.5s;">
+                            And much much more!
+                         </h2>
 
-        <div ng-controller="loginController">
-        <form method="POST" name="login">
-            Username: <br>
-            <input type="text" ng-model="username"> <br>
-            Password: <br>
-            <input type="text" ng-model="password"> <br>
-            <input type="button" value="Login" ng-click="logIn(username, password)"> 
-            
-        </form>        
-        </div>
 
-        <div ng-controller="adviceController">
-            <div ng-repeat="advice in advices">
-               a: {{ advice.objectId }}
-            </div>
+                </div>
         </div>
-
+        <script type="text/javascript">
+            var counter = 1;
+            var interval = window.setInterval(function() {
+                document.getElementById("header" + counter).style.opacity = 1;
+                counter++;
+                if (counter > 5) {
+                    window.clearInterval(interval);
+                }
+            }, 500);
+        </script>
         <footer class="footer">
             <div id="footText" class="container">
                 <p>2019 Hesburgh Hackathon. Created by Zach Sy, Patrick Soga, Peter Davis, and Alena Huang.</p>
