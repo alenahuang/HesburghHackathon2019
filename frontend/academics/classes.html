@@ -89,6 +89,15 @@
                     <h4>{{ class.userUsername }} | {{ class.timestamp }}</h4>
                 </div>
                 <div class="row" id="midtext">
+                        <div class="starrating">
+                                <input type="radio" id="star5" name="rating" value="5" ng-model="stars" disabled="true"/><label for="star5" title="5 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="4" ng-model="stars" disabled="true"/><label for="star4" title="4 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" ng-model="stars" disabled="true"/><label for="star3" title="3 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="2" ng-model="stars" disabled="true"/><label for="star2" title="2 stars"></label>
+                                <input type="radio" id="star1" name="rating" value="1" ng-model="stars" disabled="true"/><label for="star1" title="1 star"></label>
+                        </div>
+                </div>
+                <div class="row" id="midtext">
                     <h2>{{class.course}} | {{class.professor}}</h2>
                 </div>
                 <div class="row" id="midtext">
