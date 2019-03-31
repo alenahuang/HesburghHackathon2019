@@ -13,16 +13,16 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="submissionsController">
+    <body ng-controller="mainController" ng-controller="submissionsController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
-                    <h1>RateND</h1>
+                    <h1>{{title}}</h1>
                 </div>
             </div>
             <div class="pull-right">
                 <button type="button" class="btn btn-default btn-lg" aria-label="User">
-                    <span>Hello, User Name</span>
+                   <span>Hello {{username}}</span>
                     <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
                 </button>
             </div>
