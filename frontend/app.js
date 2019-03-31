@@ -253,4 +253,3 @@ app.controller('logoutController', ['$scope', '$http', '$window', function($scop
        });
    }
 }]);
-
