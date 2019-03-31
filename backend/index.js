@@ -79,6 +79,7 @@ app.post('/user', (req, res) => {
    user.set('resHall', resHall);
    user.signUp().then(user => {
       var sessionToken = user.getSessionToken();
+      console.log('User signed up!');
    }).catch(error => console.log('Error: ', error));
 
    res.sendStatus(200);
@@ -86,6 +87,7 @@ app.post('/user', (req, res) => {
 
 app.get('/login', (req, res) => {
     fs.readFile("../frontend/login.html",'utf8',(err,data)=>{
+        console.log('User logged in!');
         res.contentType("text/html");
         res.send(data);
     });
