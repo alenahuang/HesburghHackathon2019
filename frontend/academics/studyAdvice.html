@@ -84,19 +84,35 @@
                 </div>
 
             </div>
+          </div>
 
-            <div class="row my-5" ng-repeat="studyAdvice in studyAdvices">
-                <div class="col">
-                    <h1>
-                        {{ studyAdvice.title }}
-                    </h1>
-                    <h3>
-                        {{ studyAdvice.text }}
-                    </h3>
-                </div>
+          <div class="row my-5" ng-repeat="studyAdvice in studyAdvices">
+              <div class="col">
+                  <div class="row" id="toptext">
+                      <h4>{{ studyAdvice.user.username }} | {{ studyAdvice.user.dateTime }}</h4>
+                  </div>
+                  <div class="row" id="midtext">
+                      <h2>{{ studyAdvice.title }}</h2>
+                  </div>
+                  <div class="row" id="midtext">
+                      <h4>{{ studyAdvice.text }}</h4>
+                  </div>
+                  <div class="row" id="thumbupdown">
+                      <div class="thumb">
+                          <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                          <span><h5>&ThinSpace;{{ studyAdvice.upvotes }}</h5></span>
+                      </div>
+                      &ThickSpace;
+                      <div class="thumb">
+                          <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                          <span><h5>&ThinSpace;{{ studyAdvice.downvotes }}</h5></span>
+                      </div>
+                  </div>
+  
+              </div>
             </div>
 
-        </div>
+      </div>
 
         <footer class="footer">
             <div id="footText" class="container">

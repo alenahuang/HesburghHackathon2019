@@ -85,21 +85,30 @@
             </div>
 
             <div class="row my-5" ng-repeat="review in reviews">
-                <div class="col">
-                    <h1>
-                        {{review.user.username}} | {{review.location}} | Stars: {{review.stars}}
-                    </h1>
-                    <h3>
-                        {{review.text}}
-                    </h3>
-                    <h3>
-                        Upvotes: {{review.upvotes}}
-                    </h3>
-                    <h3>
-                        Downvotes: {{review.downvotes}}
-                    </h3>
-                </div>
-            </div>
+                    <div class="col">
+                        <div class="row" id="toptext">
+                            <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
+                        </div>
+                        <div class="row" id="midtext">
+                            <h2>{{ review.location }}</h2>
+                        </div>
+                        <div class="row" id="midtext">
+                            <h4>{{ review.text }}</h4>
+                        </div>
+                        <div class="row" id="thumbupdown">
+                            <div class="thumb">
+                                <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                                <span><h5>&ThinSpace;{{ review.upvotes }}</h5></span>
+                            </div>
+                            &ThickSpace;
+                            <div class="thumb">
+                                <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                                <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
+                            </div>
+                        </div>
+        
+                    </div>
+                  </div>
         </div>
 
     <footer class="footer">
