@@ -13,14 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <script src="../app.js"></script>
-    
 </head>
 
-<body ng-controller="mainController">
+<body  ng-controller="mainController">
     <header class="header">
         <div class="pull-left">
             <div id="headText" class="container">
-                 <h1>{{title}}</h1>
+                <h1>{{title}}</h1>
             </div>
         </div>
         <div class="pull-right">
@@ -38,13 +37,13 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-text" href="/">Home</a>
+                    <a class="nav-link" id="nav-text" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-text" href="../academics/academics.html">Academics</a>
+                    <a class="nav-link" id="nav-text" href="academics.html">Academics</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" id="nav-text" href="ecs.html">Extracurriculars<span class="sr-only">(current)</span> </a>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-text" href="../ecs/ecs.html">Extracurriculars</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="nav-text" href="../food/food.html">Food</a>
@@ -59,38 +58,60 @@
         </div>
     </nav>
 
-    <div class="container" ng-controller="clubsAdviceController">
+    <div class="container" ng-controller="profileController">
+        <div class="row" id="profile">
+            <h1>Profile: {{ username }}</h1>
+        </div>
         <div class="row">
-            <div class="col m-0 p-0">
-                <h1>
-                    Clubs Advice
-                </h1>
+            <div class="col-6">
+                <h3>Email: {{ email }}</h3>
+                <h3>Major: {{ major }}</h3>
             </div>
-            <div class="col text-right m-0 p-0">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort by
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" ng-click="newest()">Newest</a>
-                        <a class="dropdown-item" ng-click="upvotes()">Most liked</a>
+            <div class="col-6">
+                <h3>Residence Hall: {{ resHall }}</h3>
+                <h3>Graduation Year: {{ gradYear }}</h3>
+            </div> 
+        </div>
+        <div class="row" id="profile">
+            <h1>Your Reviews</h1>
+            <div ng-repeat="review in reviews">
+                <div class="row my-5" ng-repeat="review in reviews">
+                    <div class="col">
+
+                        <div class="row" id="toptext">
+                            <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
+                        </div>
+                        <div class="row" id="midtext">
+                            <h2>{{ review.location }}</h2>
+                        </div>
+                        <div class="row" id="midtext">
+                            <h4>{{ review.text }}</h4>
+                        </div>
+                        <div class="row" id="thumbupdown">
+                            <div class="thumb">
+                                <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                                <span><h5>&ThinSpace;{{ review.upvotes }}</h5></span>
+                            </div>
+                            &ThickSpace;
+                            <div class="thumb">
+                                <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                                <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-4" onclick="(function(){document.location.href='../newpost.html'}());">
-                    Write your own
-                </button>
-
             </div>
+            
+        </div>
+        <div class="row" id="profile">
+            <h1>Your Advice</h1>
 
-          </div>
 
-            <div class="row my-5" ng-repeat="advice in advices">
+        <div class="row my-5" ng-repeat="advice in advices">
                 <div class="col">
                     <div class="row" id="toptext">
                         <h4>{{ advice.user.username }} | {{ advice.user.dateTime }}</h4>
-                    </div>
-                    <div class="row" id="midtext">
-                        <h2>{{ advice.title }}</h2>
                     </div>
                     <div class="row" id="midtext">
                         <h4>{{ advice.text }}</h4>
@@ -106,10 +127,19 @@
                             <span><h5>&ThinSpace;{{ advice.downvotes }}</h5></span>
                         </div>
                     </div>
-    
+                    
                 </div>
-              </div>
-      </div>
+        </div>
+        </div>
+        <div class="row" id="profile">
+             <button type="button" class="btn btn-primary mt-4" id="writebutton" onclick="(function(){document.location.href='../newpost.html'}());">
+                 Write More Reviews/Advice
+            </button>
+        </div>
+
+    </div>
+
+
 
     <footer class="footer">
         <div id="footText" class="container">

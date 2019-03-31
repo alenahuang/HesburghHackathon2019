@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 
-<head>
-    <title>RateND</title>
+<head ng-controller="mainController">
+    <title>{{title}}</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap.min.css">
@@ -15,16 +15,16 @@
     <script src="../app.js"></script>
 </head>
 
-<body>   
+<body  ng-controller="mainController">
     <header class="header">
         <div class="pull-left">
             <div id="headText" class="container">
-                <h1>RateND</h1>
+                <h1>{{title}}</h1>
             </div>
         </div>
         <div class="pull-right">
             <button type="button" class="btn btn-default btn-lg" aria-label="User">
-                <span>Hello, User Name</span>
+                <span>Hello {{username}}</span>
                 <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
             </button>
         </div>
@@ -53,27 +53,27 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
                     <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
-          </form>
+                </form>
+            </div>
         </div>
-        </div>
-      </nav>
+    </nav>
 
-      <div class="container" ng-controller="academicsClassController">
-          <div class="row">
+    <div class="container" ng-controller="academicsClassController">
+        <div class="row">
             <div class="col m-0 p-0">
                 <h1>
-                    Classes Advice
+                    Classes Ratings
                 </h1>
             </div>
             <div class="col text-right m-0 p-0">
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Newest
+                        Sort by
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Most liked</a>
-                        <a class="dropdown-item" href="#">Star rating (high-low)</a>
-                        <a class="dropdown-item" href="#">Star rating (low-high)</a>
+                        <a class="dropdown-item" ng-click="newest()">Newest</a>
+                        <a class="dropdown-item" ng-click="upvotes()">Most liked</a>
+                        <a class="dropdown-item" ng-click="stars(true)">Most starred</a>
                     </div>
                 </div>
                 <button type="button" class="btn btn-primary mt-4" onclick="(function(){document.location.href='../newpost.html'}());">
@@ -92,7 +92,7 @@
                     <h2>{{class.course}} | {{class.professor}}</h2>
                 </div>
                 <div class="row" id="midtext">
-                    <h4>{{class.experience}}</h4>
+                    <h4>{{class.text}}</h4>
                 </div>
                 <div class="row" id="thumbupdown">
                     <div class="thumb">
@@ -105,7 +105,6 @@
                         <span><h5>&ThinSpace;{{ class.downvotes }}</h5></span>
                     </div>
                 </div>
-
             </div>
           </div>
 
