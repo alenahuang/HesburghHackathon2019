@@ -187,14 +187,14 @@
                         <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="ecsExp"></textarea>
                     </div>
                     <div class="form-group mt-4">
-                            <h3>Star rating:</h3>
-                            <div class="rating">
-                                    <input type="radio" id="star1" name="rating" value="1" ng-model="ecStars"/><label for="star1" title="1 star"></label>
-                                    <input type="radio" id="star2" name="rating" value="2" ng-model="ecStars"/><label for="star2" title="2 stars"></label>
-                                    <input type="radio" id="star3" name="rating" value="3" ng-model="ecStars"/><label for="star3" title="3 stars"></label>
-                                    <input type="radio" id="star4" name="rating" value="4" ng-model="ecStars"/><label for="star4" title="4 stars"></label>
-                                    <input type="radio" id="star5" name="rating" value="5" ng-model="ecStars"/><label for="star5" title="5 stars"></label>
-                            </div>
+                        <h3>Star rating:</h3>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" ng-model="stars"><label for="star5" title="5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" ng-model="stars"/><label for="star4" title="4 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" ng-model="stars"/><label for="star3" title="3 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" ng-model="stars"/><label for="star2" title="2 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" ng-model="stars"/><label for="star1" title="1 star"></label>
+                        </div>
                         </div>
                 </form>
         </div>        
@@ -222,11 +222,11 @@
                 <div class="form-group mt-4">
                         <h3>Star rating:</h3>
                         <div class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" ng-model="foodStars"/><label for="star5" title="5 stars"></label>
-                                <input type="radio" id="star4" name="rating" value="4" ng-model="foodStars"/><label for="star4" title="4 stars"></label>
-                                <input type="radio" id="star3" name="rating" value="3" ng-model="foodStars"/><label for="star3" title="3 stars"></label>
-                                <input type="radio" id="star2" name="rating" value="2" ng-model="foodStars"/><label for="star2" title="2 stars"></label>
-                                <input type="radio" id="star1" name="rating" value="1" ng-model="foodStars"/><label for="star1" title="1 star"></label>
+                                <input type="radio" id="star1" name="rating" value="5" ng-model="stars"/><label for="star5" title="5 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="4" ng-model="stars"/><label for="star4" title="4 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" ng-model="stars"/><label for="star3" title="3 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="2" ng-model="stars"/><label for="star2" title="2 stars"></label>
+                                <input type="radio" id="star5" name="rating" value="1" ng-model="stars"/><label for="star1" title="1 star"></label>
                         </div>
                     </div>
 
@@ -244,25 +244,25 @@
         </div>
         <div class="container mt-4">
             <form class="form-inline">
-                <button class="btn btn-secondary classes"  type="submit" style="display: none; font-size:1.6em;" ng-click="classes(title, professor, course, classExp, stars)">Submit</button>
+                <button class="btn btn-secondary classes"  type="submit" style="display: none; font-size:1.6em;" ng-click="classes(atitle, professor, course, classExp, stars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary study"  type="submit" style="display: none; font-size:1.6em;" ng-click="study(title, studyAdvice)">Submit</button>
+                <button class="btn btn-secondary study"  type="submit" style="display: none; font-size:1.6em;" ng-click="study(atitle, studyAdvice)">Submit</button>
             </form>
             <form class="form-inline">
                 <button class="btn btn-secondary career"  type="submit" style="display: none; font-size:1.6em;" ng-click="career(title, careerAdvice)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary events"  type="submit" style="display: none; font-size:1.6em;" ng-click="events(event, ecsExp, ecStars)">Submit</button>
+                <button class="btn btn-secondary events"  type="submit" style="display: none; font-size:1.6em;" ng-click="events(event, ecsExp, stars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(clubsExp, title)">Submit</button>
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(clubsExp, atitle)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary review"  type="submit" style="display: none; font-size:1.6em;" ng-click="review(place, foodExp, foodStars)">Submit</button>
+                <button class="btn btn-secondary review"  type="submit" style="display: none; font-size:1.6em;" ng-click="review(place, foodExp, stars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary advice"  type="submit" style="display: none; font-size:1.6em;" ng-click="advice(foodAdvice, title)">Submit</button>
+                <button class="btn btn-secondary advice"  type="submit" style="display: none; font-size:1.6em;" ng-click="advice(foodAdvice, atitle)">Submit</button>
             </form>
 
 

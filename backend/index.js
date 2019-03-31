@@ -174,17 +174,17 @@ app.post('/makeAcademicEntry', (req, res) => {
 app.post('/makeAdvice', (req, res) => {
     // var user = Parse.User.current();
     var Advice = Parse.Object.extend('Advice');
-    var aadvice = new Parse.Advice();
+    var aadvice = new Advice();
     aadvice.set('user', Parse.User.current());
     aadvice.set('userUsername', Parse.User.current().get('username'));
     aadvice.set('text', req.body.advice);
     var today = new Date();
-    aadvice.set('timestamp', today.now().toDateString());
+    aadvice.set('timestamp', today.toDateString());
     aadvice.set('upvotes', 0);
     aadvice.set('downvotes', 0);
     aadvice.set('location', req.body.location);
     aadvice.set('section', req.body.section);
-    advice.set('title', req.body.title);
+    aadvice.set('title', req.body.title);
 
     aadvice.save()
         .then((entry => {
@@ -201,7 +201,7 @@ app.post('/makeReview', (req, res) => {
     review.set('userUsername', Parse.User.current().get('username'));
     review.set('text', req.body.review);
     var today = new Date();
-    review.set('timestamp', today.now().toDateString());
+    review.set('timestamp', today.toDateString());
     review.set('upvotes', 0);
     review.set('downvotes', 0);
     review.set('location', req.body.location);

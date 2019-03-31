@@ -88,19 +88,19 @@ app.controller('submissionController', ['$scope', '$http', '$window', function($
            $window.location.href = '/';
         });
     }
-    $scope.clubs = function(clubsExp, title,someStars) {
-        data = {"advice": clubsExp, "title": title, "section": "clubs", "stars":someStars};
+    $scope.clubs = function(clubsExp, title) {
+        data = {"advice": clubsExp, "title": title, "section": "clubs"};
         $http.post('/makeAdvice', data, 'applcation/json').then(res => {
            $window.location.href = '/';
         });
     }
-    $scope.events = function(ecStars, event, ecsExp) {
+    $scope.events = function(event, ecsExp,ecStars) {
         data = {"stars":ecStars, "review": ecsExp, "location": event, "section": "events"};
         $http.post('/makeReview', data, 'application/json').then(res => {
-           $window.location.href = '/';
+           $window.location.href = '/' ;
         });
     }
-    $scope.review = function(foodStars, place, foodExp) {
+    $scope.review = function(place,foodExp,foodStars) {
         data = {"review": foodExp, "location": place, "stars": foodStars, "section": "food"};
         $http.post('/makeReview', data, 'application/json').then(res => {
             $window.location.href = '/';
