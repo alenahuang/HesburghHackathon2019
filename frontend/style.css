@@ -96,3 +96,10 @@ body {
     padding-top: 5px;
 }
 
+#profile h1 {
+    color: #F3969A;
+}
+
+#writebutton {
+    font-size: 1.5em;
+}
