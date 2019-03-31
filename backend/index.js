@@ -104,3 +104,75 @@ app.get('/academicEntries', (req, res) => {
            res.send(data);
        }).catch(error => console.log('Error: ', error));
 });
+
+app.post('/makeAcademicEntry', (req, res) => {
+   var AcademicEntry = Parse.Object.extend('AcademicEntry');
+   var academicEntry = new AcademicEntry();
+   academicEntry.set('experience', req.body.experience);
+   academicEntry.set('advice', req.body.careerAdvice);
+   academicEntry.set('stars', 0);
+   var today = new Date();
+   academicEntry.set('timestamp', today);
+   academicEntry.set('upvotes', 0);
+   academicEntry.set('downvotes', 0);
+   academicEntry.set('professor', req.body.professor);
+   academicEntry.set('course', req.body.course);
+   academicEntry.set('section', req.body.section);
+   academicEntry.set('title', req.body.title);
+   if (!((req.body.classExp) === undefined)) {
+        academicEntry.set('text', req.body.classExp);
+   }
+   else if (!((req.body.studyAdvice) === undefined)) {
+       academicEntry.set('text', req.body.studyAdvice);
+   }
+   else if (!((req.body.careerAdvice) === undefined)) {
+       academicEntry.set('text', req.body.careerAdvice);
+   }
+
+   academicEntry.save()
+       .then((entry => {
+           console.log(entry);
+           res.sendStatus(200);
+           }
+       )).catch(error => console.log('Error: ', error));
+});
+
+app.post('/makeAdvice', (req, res) => {
+    var Advice = Parse.Object.extend('Advice');
+    var aadvice = new Advice();
+    aadvice.set('text', req.body.advice);
+    var today = new Date();
+    aadvice.set('timestamp', today);
+    aadvice.set('upvotes', 0);
+    aadvice.set('downvotes', 0);
+    aadvice.set('location', req.body.location);
+    aadvice.set('section', req.body.section);
+    advice.set('title', req.body.title);
+
+    aadvice.save()
+        .then((entry => {
+                console.log(entry);
+                res.sendStatus(200);
+            }
+        )).catch(error => console.log('Error: ', error));
+});
+
+app.post('/makeReview', (req, res) => {
+    var Review = Parse.Object.extend('Review');
+    var review = new Review();
+    review.set('text', req.body.review);
+    var today = new Date();
+    review.set('timestamp', today);
+    review.set('upvotes', 0);
+    review.set('downvotes', 0);
+    review.set('location', req.body.location);
+    review.set('section', req.body.section);
+    review.set('stars', parseInt(req.body.stars));
+
+    review.save()
+        .then((entry => {
+                console.log(entry);
+                res.sendStatus(200);
+            }
+        )).catch(error => console.log('Error: ', error));
+});
