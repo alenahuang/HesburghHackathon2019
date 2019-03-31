@@ -1,7 +1,7 @@
 var app = angular.module('app', []);
 // Controllers
 
-app.controller('mainController', ["$scope", "$http", function($scope, $http) {
+app.controller('mainController', ["$scope", "$http","$window", function($scope, $http,$window) {
 	$scope.title='RateND';
     $scope.a = '';
     $scope.username = "Anonymous"
@@ -20,6 +20,10 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
         $http.get('/test').then(function (res) {
             $scope.advices = res.data;
         });
+    }
+
+    $scope.gotoProfile = function(){
+        $window.location.href = '/profile.html'
     }
 }]);
 
