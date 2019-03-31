@@ -52,8 +52,8 @@
                 </ul>
                 <div class="pull-right">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
-                        <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
+                        <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search..." ng-model="keyword">
+                        <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit" ng-click="searchByKeyword(keyword)">Search</button>
                     </form>
                 </div>
             </div>
@@ -97,12 +97,12 @@
                   </div>
                   <div class="row" id="thumbupdown">
                       <div class="thumb">
-                          <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                          <span class="glyphicon glyphicon-thumbs-up" id="thumbs" ng-click="thumbs(cadvice.objectId,cadvice.upvotes,true)"></span>
                           <span><h5>&ThinSpace;{{ cadvice.upvotes }}</h5></span>
                       </div>
                       &ThickSpace;
                       <div class="thumb">
-                          <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                          <span class="glyphicon glyphicon-thumbs-down" id="thumbs" ng-click="thumbs(cadvice.objectId,cadvice.downvotes,false)"></span>
                           <span><h5>&ThinSpace;{{ cadvice.downvotes }}</h5></span>
                       </div>
                   </div>

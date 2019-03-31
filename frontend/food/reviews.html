@@ -90,24 +90,27 @@
                             <h4>{{ review.userUsername }} | {{ review.timestamp }} </h4>
                         </div>
                         <div class="row" id="midtext">
+                            <div class="starrating">
+                                <label style="color:#4eac92;font-size:200%" ng-repeat="i in [].constructor(review.stars) track by $index">★</label>
+                            </div>
+                        </div>
+                        <div class="row" id="midtext">
                             <h2>{{ review.location }}</h2>
                         </div>
                         <div class="row" id="midtext">
                             <h4>{{ review.text }}</h4>
                         </div>
-                        
                         <div class="row" id="thumbupdown">
                             <div class="thumb">
-                                <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                                <span class="glyphicon glyphicon-thumbs-up" id="thumbs" ng-click="thumbs(review.objectId,review.upvotes,true)"></span>
                                 <span><h5>&ThinSpace;{{ review.upvotes }}</h5></span>
                             </div>
                             &ThickSpace;
                             <div class="thumb">
-                                <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                                <span class="glyphicon glyphicon-thumbs-down" id="thumbs" ng-click="thumbs(review.objectId,review.downvotes,false)"></span>
                                 <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
                             </div>
                         </div>
-        
                     </div>
                   </div>
         </div>

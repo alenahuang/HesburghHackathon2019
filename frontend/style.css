@@ -147,3 +147,39 @@ body {
     top:2px;
     left:2px;
 }
+
+/* star stuff on actual site */
+.starrating {
+    float:left;
+    }
+
+.starrating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.starrating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+}
+
+.starrating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.starrating > input:checked ~ label {
+    color: #4eac92;
+}
+
+.starrating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}

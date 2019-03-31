@@ -51,8 +51,8 @@
             </ul>
             <div class="pull-right">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
-                    <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search..." ng-model="keyword">
+                    <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit" ng-click="searchByKeyword(keyword)">Search</button>
                 </form>
             </div>
         </div>
@@ -73,63 +73,10 @@
             </div> 
         </div>
         <div class="row" id="profile">
-            <h1>Your Reviews</h1>
-            <div ng-repeat="review in reviews">
-                <div class="row my-5" ng-repeat="review in reviews">
-                    <div class="col">
 
-                        <div class="row" id="toptext">
-                            <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
-                        </div>
-                        <div class="row" id="midtext">
-                            <h2>{{ review.location }}</h2>
-                        </div>
-                        <div class="row" id="midtext">
-                            <h4>{{ review.text }}</h4>
-                        </div>
-                        <div class="row" id="thumbupdown">
-                            <div class="thumb">
-                                <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
-                                <span><h5>&ThinSpace;{{ review.upvotes }}</h5></span>
-                            </div>
-                            &ThickSpace;
-                            <div class="thumb">
-                                <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
-                                <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            
         </div>
         <div class="row" id="profile">
-            <h1>Your Advice</h1>
 
-
-        <div class="row my-5" ng-repeat="advice in advices">
-                <div class="col">
-                    <div class="row" id="toptext">
-                        <h4>{{ advice.userUsername }} | {{ advice.timestamp }}</h4>
-                    </div>
-                    <div class="row" id="midtext">
-                        <h4>{{ advice.text }}</h4>
-                    </div>
-                    <div class="row" id="thumbupdown">
-                        <div class="thumb">
-                            <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
-                            <span><h5>&ThinSpace;{{ advice.upvotes }}</h5></span>
-                        </div>
-                        &ThickSpace;
-                        <div class="thumb">
-                            <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
-                            <span><h5>&ThinSpace;{{ advice.downvotes }}</h5></span>
-                        </div>
-                    </div>
-                    
-                </div>
-        </div>
         </div>
         <div class="row" id="profile">
              <button type="button" class="btn btn-primary mt-4" id="writebutton" onclick="(function(){document.location.href='../newpost.html'}());">

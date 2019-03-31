@@ -179,12 +179,12 @@ app.post('/makeAdvice', (req, res) => {
     aadvice.set('userUsername', Parse.User.current().get('username'));
     aadvice.set('text', req.body.advice);
     var today = new Date();
-    aadvice.set('timestamp', today.now().toDateString());
+    aadvice.set('timestamp', today.toDateString());
     aadvice.set('upvotes', 0);
     aadvice.set('downvotes', 0);
     aadvice.set('location', req.body.location);
     aadvice.set('section', req.body.section);
-    advice.set('title', req.body.title);
+    aadvice.set('title', req.body.title);
 
     aadvice.save()
         .then((entry => {
@@ -201,7 +201,7 @@ app.post('/makeReview', (req, res) => {
     review.set('userUsername', Parse.User.current().get('username'));
     review.set('text', req.body.review);
     var today = new Date();
-    review.set('timestamp', today.now().toDateString());
+    review.set('timestamp', today.toDateString());
     review.set('upvotes', 0);
     review.set('downvotes', 0);
     review.set('location', req.body.location);
@@ -215,6 +215,27 @@ app.post('/makeReview', (req, res) => {
             }
         )).catch(error => console.log('Error: ', error));
 });
+
+app.post('/thumbs',(req,res)=>{
+    var postType = req.body.postType
+    // var postRequest = Parse.Object.extend(postType);
+    var query = new Parse.Query(postType)
+    query.equalTo('objectId', req.body.postID);
+    query.first()
+         .then((entry => {
+             entry.save().then(entry =>{
+                 if(req.body.up){
+                     entry.set("upvotes", req.body.count+1)
+                 }else{
+                     entry.set("downvotes", req.body.count+1)
+                 }
+
+                 return entry.save()
+             })
+         })).then((entry =>{
+             res.sendStatus(200)
+         })).catch(error => console.log('Error: ', error));
+})
 
 app.get('/logout', (req, res) => {
    var user = Parse.User.current();

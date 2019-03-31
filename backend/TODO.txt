@@ -1,5 +1,2 @@
-TODO: 
-	- Log out
-	- Search
-	- save users
+TODO:
 	- increment like and dislike
