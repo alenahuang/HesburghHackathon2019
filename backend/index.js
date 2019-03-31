@@ -35,7 +35,7 @@ app.get('/', (req, res)=>{
 
 app.get('/userInfo/:thing', (req, res)=>{
     var currentUser = Parse.User.current()
-    var username = currentUser.get(req.params["thing"]);
+    var username = String(currentUser.get(req.params["thing"]));
     res.send(username)
 });
 
@@ -81,19 +81,18 @@ app.get('/userAdvices', (req, res) => {
 });
 
 app.post('/user', (req, res) => {
-    console.log(req)
    var user = new Parse.User();
    var username = req.body.username;
    var password = req.body.password;
    var email = req.body.email;
-   var year = req.body.year;
+    var year = parseInt(req.body.year);
    var major = req.body.major;
    var resHall = req.body.resHall;
 
    user.set('username', username);
    user.set('password', password);
    user.set('email', email);
-   user.set('year', year);
+   user.set('gradYear', year);
    user.set('major', major);
    user.set('resHall', resHall);
    user.signUp().then(user => {
