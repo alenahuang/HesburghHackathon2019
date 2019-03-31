@@ -72,10 +72,9 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
 }]);
 
 app.controller('submissionController', ['$scope', '$http', '$window', function($scope, $http, $window) {
-
     $scope.classes = function(classTitle, professor, course, classExp) {
         data = {"title": classTitle, "professor": professor, "course": course, "classExp": classExp, "section": "classReview"}
-        alert(data)
+
         $http.post('/makeAcademicEntry', data, 'application/json').then(res => {
            $window.location.href = '/';
         });

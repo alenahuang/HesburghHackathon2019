@@ -13,7 +13,7 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController" ng-controller="submissionsController">
+    <body ng-controller="mainController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -64,7 +64,7 @@
         <div class="container">
             <h1>Add A Review or Advice</h1>
         </div>
-
+        <div  ng-controller="submissionController">
         <!-- general categories -->
         <div class="container mt-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -219,29 +219,30 @@
             </form>
         </div>
         <div class="container mt-4">
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(atitle, professor, course, classExp)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary study"  type="submit" style="display: none;" ng-click="study(atitle, studyAdvice)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary career"  type="submit" style="display: none;" ng-click="career(atitle, careerAdvice)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary events"  type="submit" style="display: none;" ng-click="events(ecStars, event, ecsExp)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary clubs"  type="submit" style="display: none;" ng-click="clubs(clubsExp, atitle)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary review"  type="submit" style="display: none;" ng-click="review(foodStars, place, foodExp)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
+            <form class="form-inline">
                 <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="advice(foodAdvice, atitle)">Submit</button>
             </form>
 
 
+        </div>
         </div>
 
         <footer class="footer">
