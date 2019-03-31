@@ -33,9 +33,9 @@ app.get('/', (req, res)=>{
 });
 
 
-app.get('/username', (req, res)=>{
+app.get('/userInfo/:thing', (req, res)=>{
     var currentUser = Parse.User.current()
-    var username = currentUser.get("username");
+    var username = currentUser.get(req.params["thing"]);
     res.send(username)
 });
 
@@ -60,6 +60,25 @@ app.get('/reviews', (req, res) => {
         });
 });
 
+app.get('/userReviews', (req, res) => {
+    var Reviews = Parse.Object.extend('Review');
+    var query = new Parse.Query(Reviews);
+    query.equalTo('user',req.query["username"])
+    query.find()
+        .then(data => {
+            res.send(data);
+        });
+});
+
+app.get('/userAdvices', (req, res) => {
+    var Advice = Parse.Object.extend('Advice');
+    var query = new Parse.Query(Advice);
+    query.equalTo('user',req.query["username"])
+    query.find()
+        .then(data => {
+           res.send(data);
+        });
+});
 
 app.post('/user', (req, res) => {
     console.log(req)
@@ -79,7 +98,6 @@ app.post('/user', (req, res) => {
    user.set('resHall', resHall);
    user.signUp().then(user => {
       var sessionToken = user.getSessionToken();
-      console.log('User signed up!');
    }).catch(error => console.log('Error: ', error));
 
    res.sendStatus(200);
@@ -87,7 +105,6 @@ app.post('/user', (req, res) => {
 
 app.get('/login', (req, res) => {
     fs.readFile("../frontend/login.html",'utf8',(err,data)=>{
-        console.log('User logged in!');
         res.contentType("text/html");
         res.send(data);
     });

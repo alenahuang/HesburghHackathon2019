@@ -4,11 +4,12 @@ var app = angular.module('app', []);
 app.controller('mainController', ["$scope", "$http", function($scope, $http) {
 	$scope.title='RateND';
     $scope.a = '';
-    $scope.username = "lol"
+    $scope.username = "Anonymous"
 
-    $http.get("/username").then(function(res){
+    $http.get("/userInfo/username").then(function(res){
         $scope.username = res.data;
     })
+
     $scope.searchByKeyword = function() {
 
         $http.get('/asdf', $scope.title).then(function (res) {
@@ -22,6 +23,28 @@ app.controller('mainController', ["$scope", "$http", function($scope, $http) {
     }
 }]);
 
+app.controller("profileController",["$scope","$http",function($scope,$http){
+    $http.get("/userInfo/email").then(function(res){
+        $scope.email = res.data;
+    })
+     $http.get("/userInfo/major").then(function(res){
+        $scope.major = res.data;
+    })
+     $http.get("/userInfo/resHall").then(function(res){
+        $scope.resHall = res.data;
+    })
+    $http.get("/userInfo/gradYear").then(function(res){
+        $scope.gradYear = res.data;
+    })
+    $http.get('/userReviews',{"params":{"username":$scope.username}}).then(function (res) {
+        $scope.reviews = res.data;
+    });
+    $http.get('/userAdvices',{"params":{"username":$scope.username}}).then(function (res) {
+        $scope.advices = res.data;
+    });
+
+
+}])
 app.controller('loginController', ["$scope", "$http", "$window", function($scope, $http, $window) {
     $scope.logIn = function(username,password){ 
     $http.post('/login',{"username":username,"password":password},"application/json").then(function(res){

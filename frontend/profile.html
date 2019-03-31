@@ -58,7 +58,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" ng-controller="profileController">
         <div class="row" id="profile">
             <h1>Profile: {{ username }}</h1>
         </div>
@@ -74,13 +74,10 @@
         </div>
         <div class="row" id="profile">
             <h1>Your Reviews</h1>
-            
-        </div>
-        <div class="row" id="profile">
-            <h1>Your Advice</h1>
-            <div class="row my-5" ng-repeat="review in reviews">
+            <div ng-repeat="review in reviews">
+                <div class="row my-5" ng-repeat="review in reviews">
                     <div class="col">
-        
+
                         <div class="row" id="toptext">
                             <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
                         </div>
@@ -101,10 +98,16 @@
                                 <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
                             </div>
                         </div>
-        
+
                     </div>
+                </div>
             </div>
+            
         </div>
+        <div class="row" id="profile">
+            <h1>Your Advice</h1>
+
+
         <div class="row my-5" ng-repeat="advice in advices">
                 <div class="col">
                     <div class="row" id="toptext">
@@ -124,8 +127,9 @@
                             <span><h5>&ThinSpace;{{ advice.downvotes }}</h5></span>
                         </div>
                     </div>
-    
+                    
                 </div>
+        </div>
         </div>
         <div class="row" id="profile">
              <button type="button" class="btn btn-primary mt-4" id="writebutton" onclick="(function(){document.location.href='../newpost.html'}());">
