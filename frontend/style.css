@@ -47,7 +47,7 @@ body {
 }
 
 #loginbutton {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 #signupbox {
@@ -96,3 +96,54 @@ body {
     padding-top: 5px;
 }
 
+#profile h1 {
+    color: #F3969A;
+}
+
+#writebutton {
+    font-size: 1.5em;
+}
+
+.rating {
+    float:left;
+    }
+
+/* star stuff */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #4eac92;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #4eac92;
+}
+
+
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}

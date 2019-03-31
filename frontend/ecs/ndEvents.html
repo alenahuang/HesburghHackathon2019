@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="pull-right">
-            <button type="button" class="btn btn-default btn-lg" aria-label="User">
+            <button type="button" class="btn btn-default btn-lg" aria-label="User" ng-click="gotoProfile()">
                 <span>Hello {{username}}</span>
                 <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
             </button>
@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-text" href="../index.html">Home</a>
+                    <a class="nav-link" id="nav-text" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="nav-text" href="../academics/academics.html">Academics</a>
@@ -52,8 +52,8 @@
             </ul>
             <div class="pull-right">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
-                    <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search..." ng-model="keyword">
+                    <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit" ng-click="searchByKeyword(keyword)">Search</button>
                 </form>
             </div>
         </div>
@@ -68,15 +68,16 @@
             </div>
             <div class="col text-right m-0 p-0">
                 <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:1.6em">
                         Sort by
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Newest</a>
-                        <a class="dropdown-item" href="#">Most liked</a>
+                        <a class="dropdown-item" ng-click="newest()">Newest</a>
+                        <a class="dropdown-item" ng-click="upvotes()">Most liked</a>
+                        <a class="dropdown-item" ng-click="stars(true)">Most starred</a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-4" onclick="(function(){document.location.href='../newpost.html'}());">
+                <button type="button" class="btn btn-primary mt-4" style="font-size:1.6em" onclick="(function(){document.location.href='../newpost.html'}());">
                     Write your own
                 </button>
 
@@ -88,7 +89,7 @@
             <div class="col">
 
                 <div class="row" id="toptext">
-                    <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
+                    <h4>{{ review.userUsername }} | {{ review.timestamp }}</h4>
                 </div>
                 <div class="row" id="midtext">
                     <h2>{{ review.location }}</h2>
@@ -98,12 +99,12 @@
                 </div>
                 <div class="row" id="thumbupdown">
                     <div class="thumb">
-                        <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                        <span class="glyphicon glyphicon-thumbs-up" id="thumbs" ng-click="thumbs(review.objectId,review.upvotes,true)"></span>
                         <span><h5>&ThinSpace;{{ review.upvotes }}</h5></span>
                     </div>
                     &ThickSpace;
                     <div class="thumb">
-                        <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                        <span class="glyphicon glyphicon-thumbs-down" id="thumbs" ng-click="thumbs(review.objectId,review.downvotes,false)"></span>
                         <span><h5>&ThinSpace;{{ review.downvotes }}</h5></span>
                     </div>
                 </div>

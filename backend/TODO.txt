@@ -1,3 +1,2 @@
-TODO: 
-	- User profiles and login
-	- New controllers
+TODO:
+	- increment like and dislike

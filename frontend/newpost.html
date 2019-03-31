@@ -13,7 +13,7 @@
         <script src="/app.js"></script>
     </head>
 
-    <body ng-controller="mainController" ng-controller="submissionsController">
+    <body ng-controller="mainController">
         <header class="header">
             <div class="pull-left">
                 <div id="headText" class="container">
@@ -22,7 +22,7 @@
             </div>
             <div class="pull-right">
                 <button type="button" class="btn btn-default btn-lg" aria-label="User">
-                   <span>Hello {{username}}</span>
+                    <span>Hello {{username}}</span>
                     <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
                 </button>
             </div>
@@ -51,11 +51,11 @@
 
                               </li>
                             </ul>
-                          <div class="pull-right">
-                            <form class="form-inline my-2 my-lg-0">
-                              <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search...">
-                              <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit">Search</button>
-                            </form>
+                            <div class="pull-right">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="text" id="nav-text" placeholder="Search..." ng-model="keyword">
+                                    <button class="btn btn-secondary my-2 my-sm-0" id="nav-text" type="submit" ng-click="searchByKeyword(keyword)">Search</button>
+                                </form>
                           </div>
                           </div>
             </div>
@@ -64,17 +64,17 @@
         <div class="container">
             <h1>Add A Review or Advice</h1>
         </div>
-
+        <div  ng-controller="submissionController">
         <!-- general categories -->
         <div class="container mt-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="aca">
-                          <input type="radio" name="options" autocomplete="off" >Academics
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="aca">
+                          <input type="radio" name="options" autocomplete="off">Academics
                         </label>
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="ecs">
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="ecs">
                           <input type="radio" name="options" autocomplete="off">Extracurriculars
                         </label>
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="food">
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="food">
                           <input type="radio" name="options" autocomplete="off">Food
                         </label>
                 </div>                     
@@ -83,13 +83,13 @@
         <!-- academics subcategories -->
         <div class="container mt-4 aca" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons" >
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="classes">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="classes">
                             <input type="radio" name="options" id="" autocomplete="off">Classes
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="study">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="study">
                             <input type="radio" name="options" id="" autocomplete="off">Study Habits
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="career">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="career">
                             <input type="radio" name="options" id="" autocomplete="off">Career
                         </label>
                 </div>                     
@@ -98,10 +98,10 @@
         <!-- extracurriculars subcategories -->
         <div class="container mt-4 ecs" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="events">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="events">
                           <input type="radio" name="options" autocomplete="off" checked>Events
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="clubs">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="clubs">
                           <input type="radio" name="options" autocomplete="off">Clubs
                         </label>
                 </div>                     
@@ -110,10 +110,10 @@
         <!-- food subcategories -->
         <div class="container mt-4 food" style="display: none;">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
+                <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="review">
                     <input type="radio" name="options" autocomplete="off">Review
                 </label>
-                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
+                <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="advice">
                     <input type="radio" name="options" autocomplete="off">Advice
                 </label>
             </div>                     
@@ -121,21 +121,31 @@
 
         <!-- academic forms- class -->
         <div class="container mt-4 aca classes" style="display: none;">
-                <h2>Academics- Classes Reviews</h2>
-                <h5>classes</h5>
+                <h2>Academics- Class Reviews</h2>
+                <h5>What classes to take, when to take them, what should students know before signing up?</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="classTitle"></textarea>
+                        <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                     </div>
                     <div class="form-group">
                          <h3>Professor:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="professor"></textarea>
                     </div>
                     <div class="form-group">
-                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="class"></textarea>
+                         <h3>Class:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="course"></textarea>
                     </div>
                     <div class="form-group">
                          <h3>Experience:</h3> <textarea class="form-control" id="textForm" rows="3" ng-model="classExp"></textarea>
                     </div>
+                    <div class="form-group mt-4">
+                            <h3>Star rating:</h3>
+                            <div class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" ng-model="stars"><label for="star5" title="5 stars"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" ng-model="stars"/><label for="star4" title="4 stars"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" ng-model="stars"/><label for="star3" title="3 stars"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" ng-model="stars"/><label for="star2" title="2 stars"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" ng-model="stars"/><label for="star1" title="1 star"></label>
+                            </div>
+                        </div>
                 </form>
         </div>
         <!-- academic forms- study habits -->
@@ -144,7 +154,7 @@
                 <h5>Share your strategies on how to study and stay on top of things.</h5>
                 <form>
                     <div class="form-group mt-4">
-                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="studyTitle"></textarea>
+                        <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                     </div>
                     <div class="form-group">
                         <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="studyAdvice"></textarea>
@@ -155,10 +165,10 @@
         <!-- academic forms- career -->
         <div class="iWantThis container mt-4 aca career" style="display: none;">
             <h2>Academics- Career Advice</h2>
-            <h5>career advice.</h5>
+            <h5>Talk about your experiences, career pathways, how to ace that interview, etc.</h5>
             <form>
                 <div class="form-group mt-4">
-                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="careerTitle"></textarea>
+                    <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
                 </div>
                 <div class="form-group">
                     <h3>Advice:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="careerAdvice"></textarea>
@@ -168,17 +178,24 @@
         <!-- extracurriculars- event forms -->
         <div class="container ecs events mt-4" style="display: none;">
                 <h2>Extracurriculars- Events</h2>
-                <h5>events </h5>
+                <h5>So many events, so little time. Sports, dorm signature events, shows, the list goes on...</h5>
                 <form>
-                    <div class="form-group mt-4">
-                        <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="ecStars"></textarea>
-                    </div>
                     <div class="form-group">
                         <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="event"></textarea>
                     </div>
                     <div class="form-group">
                         <h3>Your experience:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="ecsExp"></textarea>
                     </div>
+                    <div class="form-group mt-4">
+                            <h3>Star rating:</h3>
+                            <div class="rating">
+                                    <input type="radio" id="star1" name="rating" value="1" ng-model="ecStars"/><label for="star1" title="1 star"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" ng-model="ecStars"/><label for="star2" title="2 stars"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" ng-model="ecStars"/><label for="star3" title="3 stars"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" ng-model="ecStars"/><label for="star4" title="4 stars"></label>
+                                    <input type="radio" id="star5" name="rating" value="5" ng-model="ecStars"/><label for="star5" title="5 stars"></label>
+                            </div>
+                        </div>
                 </form>
         </div>        
         <!-- extracurriculars- club forms -->
@@ -187,7 +204,7 @@
                 <h5>Share your experience about favorite clubs on campus. Let students know what to join!</h5>
                 <form>
                     <div class="form-group">
-                        <h3>Club:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="clubsTitle"></textarea>
+                        <h3>Club:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="title"></textarea>
                     </div>
 
                     <div class="form-group">
@@ -198,17 +215,24 @@
         <!-- food-review forms -->
         <div class="iWantThis container food review mt-4" style="display: none;">
             <h2>Food- Reviews</h2>
-            <h5>food reviews.</h5>
+            <h5>Rate your favorite places to eat on and off campus. What's your go-to order?</h5>
             <form>
-                <div class="form-group mt-4">
-                    <h3>Star rating:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="foodStars"></textarea>
-                </div>
                 <div class="form-group">
                     <h3>Place:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="place"></textarea>
                 </div>
                 <div class="form-group">
                     <h3>Experience:</h3><textarea class="form-control" id="textForm" rows="3" ng-model="foodExp"></textarea>
                 </div>
+                <div class="form-group mt-4">
+                        <h3>Star rating:</h3>
+                        <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" ng-model="foodStars"/><label for="star5" title="5 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="4" ng-model="foodStars"/><label for="star4" title="4 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" ng-model="foodStars"/><label for="star3" title="3 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="2" ng-model="foodStars"/><label for="star2" title="2 stars"></label>
+                                <input type="radio" id="star1" name="rating" value="1" ng-model="foodStars"/><label for="star1" title="1 star"></label>
+                        </div>
+                    </div>
 
             </form>
         </div>
@@ -223,29 +247,30 @@
             </form>
         </div>
         <div class="container mt-4">
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(classTitle, professor, class, classExp)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary classes"  type="submit" style="display: none; font-size:1.6em;" ng-click="classes(title, professor, course, classExp, stars)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary study"  type="submit" style="display: none;" ng-click="study(studyTitle, studyAdvice)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary study"  type="submit" style="display: none; font-size:1.6em;" ng-click="study(title, studyAdvice)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary career"  type="submit" style="display: none;" ng-click="career(careerTitle, careerAdvice)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary career"  type="submit" style="display: none; font-size:1.6em;" ng-click="career(title, careerAdvice)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary clubs"  type="submit" style="display: none;" ng-click="events(ecStars, event, ecsExp)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary events"  type="submit" style="display: none; font-size:1.6em;" ng-click="events(event, ecsExp, ecStars)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="clubs(clubsTitle, clubsExp)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(title, clubsExp)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary events"  type="submit" style="display: none;" ng-click="review(foodStars, place, foodExp)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary review"  type="submit" style="display: none; font-size:1.6em;" ng-click="review(place, foodExp, foodStars)">Submit</button>
             </form>
-            <form class="form-inline" method="POST">
-                <button class="btn btn-secondary review"  type="submit" style="display: none;" ng-click="advice(foodAdvice)">Submit</button>
+            <form class="form-inline">
+                <button class="btn btn-secondary advice"  type="submit" style="display: none; font-size:1.6em;" ng-click="advice(foodAdvice, title)">Submit</button>
             </form>
 
 
+        </div>
         </div>
 
         <footer class="footer">
