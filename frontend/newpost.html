@@ -68,13 +68,13 @@
         <!-- general categories -->
         <div class="container mt-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="aca">
-                          <input type="radio" name="options" autocomplete="off" >Academics
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="aca">
+                          <input type="radio" name="options" autocomplete="off">Academics
                         </label>
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="ecs">
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="ecs">
                           <input type="radio" name="options" autocomplete="off">Extracurriculars
                         </label>
-                        <label class="btn btn-secondary categoriesradio generalradio" onclick="handleFirstClick(this)" id="food">
+                        <label class="btn btn-secondary categoriesradio generalradio" style="font-size:1.6em" onclick="handleFirstClick(this)" id="food">
                           <input type="radio" name="options" autocomplete="off">Food
                         </label>
                 </div>                     
@@ -83,13 +83,13 @@
         <!-- academics subcategories -->
         <div class="container mt-4 aca" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons" >
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="classes">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="classes">
                             <input type="radio" name="options" id="" autocomplete="off">Classes
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="study">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="study">
                             <input type="radio" name="options" id="" autocomplete="off">Study Habits
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="career">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="career">
                             <input type="radio" name="options" id="" autocomplete="off">Career
                         </label>
                 </div>                     
@@ -98,10 +98,10 @@
         <!-- extracurriculars subcategories -->
         <div class="container mt-4 ecs" style="display: none;">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="events">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="events">
                           <input type="radio" name="options" autocomplete="off" checked>Events
                         </label>
-                        <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="clubs">
+                        <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="clubs">
                           <input type="radio" name="options" autocomplete="off">Clubs
                         </label>
                 </div>                     
@@ -110,10 +110,10 @@
         <!-- food subcategories -->
         <div class="container mt-4 food" style="display: none;">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="review">
+                <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="review">
                     <input type="radio" name="options" autocomplete="off">Review
                 </label>
-                <label class="btn btn-secondary categoriesradio" onclick="handleSecondClick(this)" id="advice">
+                <label class="btn btn-secondary categoriesradio" style="font-size:1.6em" onclick="handleSecondClick(this)" id="advice">
                     <input type="radio" name="options" autocomplete="off">Advice
                 </label>
             </div>                     
@@ -121,8 +121,8 @@
 
         <!-- academic forms- class -->
         <div class="container mt-4 aca classes" style="display: none;">
-                <h2>Academics- Classes Reviews</h2>
-                <h5>classes</h5>
+                <h2>Academics- Class Reviews</h2>
+                <h5>What classes to take, when to take them, what should students know before signing up?</h5>
                 <form>
                     <div class="form-group mt-4">
                         <h3>Title:</h3> <textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
@@ -165,7 +165,7 @@
         <!-- academic forms- career -->
         <div class="iWantThis container mt-4 aca career" style="display: none;">
             <h2>Academics- Career Advice</h2>
-            <h5>career advice.</h5>
+            <h5>Talk about your experiences, career pathways, how to ace that interview, etc.</h5>
             <form>
                 <div class="form-group mt-4">
                     <h3>Title:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="atitle"></textarea>
@@ -178,7 +178,7 @@
         <!-- extracurriculars- event forms -->
         <div class="container ecs events mt-4" style="display: none;">
                 <h2>Extracurriculars- Events</h2>
-                <h5>events </h5>
+                <h5>So many events, so little time. Sports, dorm signature events, shows, the list goes on...</h5>
                 <form>
                     <div class="form-group">
                         <h3>Event name:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="event"></textarea>
@@ -211,7 +211,7 @@
         <!-- food-review forms -->
         <div class="iWantThis container food review mt-4" style="display: none;">
             <h2>Food- Reviews</h2>
-            <h5>food reviews.</h5>
+            <h5>Rate your favorite places to eat on and off campus. What's your go-to order?</h5>
             <form>
                 <div class="form-group">
                     <h3>Place:</h3><textarea class="form-control" id="textForm" rows="1" ng-model="place"></textarea>
@@ -244,25 +244,25 @@
         </div>
         <div class="container mt-4">
             <form class="form-inline">
-                <button class="btn btn-secondary classes"  type="submit" style="display: none;" ng-click="classes(title, professor, course, classExp, stars)">Submit</button>
+                <button class="btn btn-secondary classes"  type="submit" style="display: none; font-size:1.6em;" ng-click="classes(title, professor, course, classExp, stars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary study"  type="submit" style="display: none;" ng-click="study(title, studyAdvice)">Submit</button>
+                <button class="btn btn-secondary study"  type="submit" style="display: none; font-size:1.6em;" ng-click="study(title, studyAdvice)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary career"  type="submit" style="display: none;" ng-click="career(title, careerAdvice)">Submit</button>
+                <button class="btn btn-secondary career"  type="submit" style="display: none; font-size:1.6em;" ng-click="career(title, careerAdvice)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary events"  type="submit" style="display: none;" ng-click="events(event, ecsExp, ecStars)">Submit</button>
+                <button class="btn btn-secondary events"  type="submit" style="display: none; font-size:1.6em;" ng-click="events(event, ecsExp, ecStars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary clubs"  type="submit" style="display: none;" ng-click="clubs(clubsExp, title)">Submit</button>
+                <button class="btn btn-secondary clubs"  type="submit" style="display: none; font-size:1.6em;" ng-click="clubs(clubsExp, title)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary review"  type="submit" style="display: none;" ng-click="review(place, foodExp, foodStars)">Submit</button>
+                <button class="btn btn-secondary review"  type="submit" style="display: none; font-size:1.6em;" ng-click="review(place, foodExp, foodStars)">Submit</button>
             </form>
             <form class="form-inline">
-                <button class="btn btn-secondary advice"  type="submit" style="display: none;" ng-click="advice(foodAdvice, title)">Submit</button>
+                <button class="btn btn-secondary advice"  type="submit" style="display: none; font-size:1.6em;" ng-click="advice(foodAdvice, title)">Submit</button>
             </form>
 
 
