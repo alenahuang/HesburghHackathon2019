@@ -237,7 +237,7 @@ app.post('/logout', (req, res) => {
 
 app.post('/search', (req, res) => {
     var allData = [];
-    var textData = [];
+    var dataset = [];
     var keyword = req.body.keyword;
 
     var AcademicEntry = Parse.Object.extend('AcademicEntry');
@@ -268,13 +268,13 @@ app.post('/search', (req, res) => {
                                if (!(data.get('experience') === undefined))
                                {
                                    if (data.get('experience').includes(keyword)) {
-                                       textData.push(data.get('experience'));
+                                       dataset.push(data);
                                    }
                                }
                                else if (!(data.get('advice') === undefined))
                                {
                                    if (data.get('advice').includes(keyword)) {
-                                       textData.push(data.get('advice'));
+                                       dataset.push(data);
                                    }
                                }
                                else if (!(data.get('text') === undefined))
@@ -282,12 +282,12 @@ app.post('/search', (req, res) => {
                                    let key = keyword.toLowerCase();
                                    if (data.get('text').toLowerCase().includes(key)) {
                                        console.log('Hit!');
-                                       textData.push(data.get('text'));
+                                       dataset.push(data);
                                    }
                                }
 
                             });
-                            res.send([textData, keyword]);
+                            res.send([data, keyword]);
                         });
                 });
         });
