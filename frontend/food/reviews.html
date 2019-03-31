@@ -87,7 +87,7 @@
             <div class="row my-5" ng-repeat="review in reviews">
                     <div class="col">
                         <div class="row" id="toptext">
-                            <h4>{{ review.user.username }} | {{ review.user.dateTime }}</h4>
+                            <h4>{{ review.userUsername }} | {{ review.createdAt }} </h4>
                         </div>
                         <div class="row" id="midtext">
                             <h2>{{ review.location }}</h2>
@@ -95,6 +95,7 @@
                         <div class="row" id="midtext">
                             <h4>{{ review.text }}</h4>
                         </div>
+                        
                         <div class="row" id="thumbupdown">
                             <div class="thumb">
                                 <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>

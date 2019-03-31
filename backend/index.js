@@ -142,9 +142,11 @@ app.post('/makeAcademicEntry', (req, res) => {
    var academicEntry = new AcademicEntry();
    academicEntry.set('experience', req.body.experience);
    academicEntry.set('advice', req.body.careerAdvice);
+   academicEntry.set('user', Parse.User.current());
+   academicEntry.set('userUsername', Parse.User.current().get('username'));
     academicEntry.set('stars', parseInt(req.body.stars));
    var today = new Date();
-   academicEntry.set('timestamp', today);
+   academicEntry.set('timestamp', today.toDateString());
    academicEntry.set('upvotes', 0);
    academicEntry.set('downvotes', 0);
    academicEntry.set('professor', req.body.professor);
@@ -170,13 +172,14 @@ app.post('/makeAcademicEntry', (req, res) => {
 });
 
 app.post('/makeAdvice', (req, res) => {
-    var user = Parse.User.current();
+    // var user = Parse.User.current();
     var Advice = Parse.Object.extend('Advice');
     var aadvice = new Advice();
-    aadvice.set('user', user);
+    aadvice.set('user', Parse.User.current());
+    aadvice.set('userUsername', Parse.User.current().get('username'));
     aadvice.set('text', req.body.advice);
     var today = new Date();
-    aadvice.set('timestamp', today);
+    aadvice.set('timestamp', today.now().toDateString());
     aadvice.set('upvotes', 0);
     aadvice.set('downvotes', 0);
     aadvice.set('location', req.body.location);
@@ -194,9 +197,11 @@ app.post('/makeAdvice', (req, res) => {
 app.post('/makeReview', (req, res) => {
     var Review = Parse.Object.extend('Review');
     var review = new Review();
+    review.set('user', Parse.User.current());
+    review.set('userUsername', Parse.User.current().get('username'));
     review.set('text', req.body.review);
     var today = new Date();
-    review.set('timestamp', today);
+    review.set('timestamp', today.now().toDateString());
     review.set('upvotes', 0);
     review.set('downvotes', 0);
     review.set('location', req.body.location);
