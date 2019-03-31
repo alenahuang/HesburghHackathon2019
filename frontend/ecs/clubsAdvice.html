@@ -85,22 +85,31 @@
 
           </div>
 
-          <div class="row my-5" ng-repeat="advice in advices">
-            <div class="col">
-                <h1>
-                    {{advice.user.username}}| {{advice.club}}
-                </h1>
-                <h3>
-                    {{advice.text}}
-                </h3>
-                <h3>
-                    Upvotes: {{advice.upvotes}}
-                </h3>
-                <h3>
-                    Downvotes: {{advice.downvotes}}
-                </h3>
-            </div>
-          </div>
+            <div class="row my-5" ng-repeat="advice in advices">
+                <div class="col">
+                    <div class="row" id="toptext">
+                        <h4>{{ advice.user.username }} | {{ advice.user.dateTime }}</h4>
+                    </div>
+                    <div class="row" id="midtext">
+                        <h2>{{ advice.title }}</h2>
+                    </div>
+                    <div class="row" id="midtext">
+                        <h4>{{ advice.text }}</h4>
+                    </div>
+                    <div class="row" id="thumbupdown">
+                        <div class="thumb">
+                            <span class="glyphicon glyphicon-thumbs-up" id="thumbs"></span>
+                            <span><h5>&ThinSpace;{{ advice.upvotes }}</h5></span>
+                        </div>
+                        &ThickSpace;
+                        <div class="thumb">
+                            <span class="glyphicon glyphicon-thumbs-down" id="thumbs"></span>
+                            <span><h5>&ThinSpace;{{ advice.downvotes }}</h5></span>
+                        </div>
+                    </div>
+    
+                </div>
+              </div>
       </div>
 
     <footer class="footer">
