@@ -72,8 +72,8 @@ app.controller('userCreationController', ["$scope", "$http", function($scope, $h
 }]);
 
 app.controller('submissionController', ['$scope', '$http', '$window', function($scope, $http, $window) {
-    $scope.classes = function(classTitle, professor, course, classExp) {
-        data = {"title": classTitle, "professor": professor, "course": course, "classExp": classExp, "section": "classReview"}
+    $scope.classes = function(classTitle, professor, course, classExp, someStars) {
+        data = {"title": classTitle, "professor": professor, "course": course, "classExp": classExp, "section": "classReview","stars":someStars}
 
         $http.post('/makeAcademicEntry', data, 'application/json').then(res => {
            $window.location.href = '/';
@@ -91,14 +91,14 @@ app.controller('submissionController', ['$scope', '$http', '$window', function($
            $window.location.href = '/';
         });
     }
-    $scope.clubs = function(clubsExp, title) {
-        data = {"advice": clubsExp, "title": title, "section": "clubs"};
+    $scope.clubs = function(clubsExp, title,someStars) {
+        data = {"advice": clubsExp, "title": title, "section": "clubs", "stars":someStars};
         $http.post('/makeAdvice', data, 'applcation/json').then(res => {
            $window.location.href = '/';
         });
     }
     $scope.events = function(ecStars, event, ecsExp) {
-        data = {"review": ecsExp, "location": event, "section": "events"};
+        data = {"stars":ecStars, "review": ecsExp, "location": event, "section": "events"};
         $http.post('/makeReview', data, 'application/json').then(res => {
            $window.location.href = '/';
         });

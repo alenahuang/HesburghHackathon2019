@@ -143,7 +143,7 @@ app.post('/makeAcademicEntry', (req, res) => {
    var academicEntry = new AcademicEntry();
    academicEntry.set('experience', req.body.experience);
    academicEntry.set('advice', req.body.careerAdvice);
-   academicEntry.set('stars', 0);
+    academicEntry.set('stars', parseInt(req.body.stars));
    var today = new Date();
    academicEntry.set('timestamp', today);
    academicEntry.set('upvotes', 0);
